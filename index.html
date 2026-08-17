@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Socializer — Gizlilik Politikası</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1412; --muted: #5b5450;
+    --accent: #d9503f; --line: #e6e1de; --card: #faf8f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #120d0b; --fg: #f2eeec; --muted: #a49b96;
+            --accent: #ff7a6b; --line: #2a221f; --card: #1c1614; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 6px; }
+  h2 { font-size: 1.2rem; margin: 40px 0 10px; padding-top: 18px; border-top: 1px solid var(--line); }
+  h3 { font-size: 1rem; margin: 22px 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 8px; }
+  .todo { background: #fff4e5; border: 1px solid #f0c98a; color: #6b4b16;
+          padding: 14px 16px; border-radius: 10px; margin: 20px 0; font-size: .93rem; }
+  @media (prefers-color-scheme: dark) {
+    .todo { background: #2a1f10; border-color: #6b4f22; color: #f0c98a; }
+  }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: .93rem; display: block; overflow-x: auto; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; white-space: nowrap; }
+  code { background: var(--card); padding: 1px 5px; border-radius: 4px; font-size: .88em; }
+  ul { padding-left: 22px; }
+  li { margin: 5px 0; }
+  a { color: var(--accent); }
+  .note { background: var(--card); border-left: 3px solid var(--accent);
+          padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+  footer { margin-top: 50px; padding-top: 18px; border-top: 1px solid var(--line);
+           color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Socializer Gizlilik Politikası</h1>
+<p class="sub">Son güncelleme: <strong>[TARİH]</strong> · Sürüm 1.0</p>
+
+<div class="todo">
+  <strong>Yayınlamadan önce doldurulacak alanlar:</strong> [TARİH], [VERİ SORUMLUSU],
+  [ADRES], [E-POSTA]. Bu dosyada köşeli parantezle işaretli her yeri kendi bilgilerinle
+  değiştir. Ayrıca bu metin bir hukukçu tarafından gözden geçirilmelidir — teknik olarak
+  uygulamanın gerçek davranışını yansıtacak şekilde yazıldı, ancak hukuki yeterlilik
+  değerlendirmesi ayrı bir iştir.
+</div>
+
+<p>
+  Socializer, çevrendeki mekanlarda bulunan insanlarla tanışmanı sağlayan bir mobil
+  uygulamadır. Bu politika, uygulamayı kullandığında hangi verilerin işlendiğini,
+  neden işlendiğini ve bunlar üzerinde hangi haklara sahip olduğunu açıklar.
+</p>
+
+<p>
+  <strong>Veri sorumlusu:</strong> [VERİ SORUMLUSU], [ADRES].
+  İletişim: <a href="mailto:[E-POSTA]">[E-POSTA]</a>
+</p>
+
+<h2>1. İşlenen veriler</h2>
+
+<table>
+  <tr><th>Veri</th><th>Neden</th><th>Hukuki dayanak</th></tr>
+  <tr>
+    <td>Kullanıcı adı (nickname)</td>
+    <td>Hesabını tanımlamak, diğer kullanıcılara göstermek</td>
+    <td>Sözleşmenin ifası</td>
+  </tr>
+  <tr>
+    <td>Telefon numarası</td>
+    <td>Hesap doğrulama, sahte hesapları önleme</td>
+    <td>Sözleşmenin ifası, meşru menfaat</td>
+  </tr>
+  <tr>
+    <td>Doğum tarihi</td>
+    <td>18 yaş sınırını uygulamak, yaş gösterimi</td>
+    <td>Hukuki yükümlülük</td>
+  </tr>
+  <tr>
+    <td>Cinsiyet, biyografi</td>
+    <td>Profilini oluşturmak (isteğe bağlı)</td>
+    <td>Açık rıza</td>
+  </tr>
+  <tr>
+    <td>Fotoğraflar</td>
+    <td>Profil gösterimi ve isteğe bağlı profil doğrulama</td>
+    <td>Açık rıza</td>
+  </tr>
+  <tr>
+    <td>Konum (enlem/boylam)</td>
+    <td>Yakındaki mekanları listelemek, check-in yapmak</td>
+    <td>Açık rıza</td>
+  </tr>
+  <tr>
+    <td>IP adresi</td>
+    <td>Sahte konum (fake GPS/VPN) tespiti</td>
+    <td>Meşru menfaat — dolandırıcılık önleme</td>
+  </tr>
+  <tr>
+    <td>Cihaz kimliği</td>
+    <td>Engellediğin kişilerin yeni hesapla karşına çıkmasını önlemek</td>
+    <td>Meşru menfaat — kullanıcı güvenliği</td>
+  </tr>
+  <tr>
+    <td>Mesajlar</td>
+    <td>Eşleştiğin kişiyle sohbet</td>
+    <td>Sözleşmenin ifası</td>
+  </tr>
+  <tr>
+    <td>Bildirim jetonu</td>
+    <td>Anlık bildirim göndermek</td>
+    <td>Açık rıza</td>
+  </tr>
+</table>
+
+<p>
+  Hesap oluştururken <strong>parola kullanılmaz</strong>. Kimlik doğrulama, cihazında
+  üretilen ve cihazından hiç çıkmayan bir Ed25519 imza anahtarıyla yapılır; sunucuya
+  yalnızca açık anahtar gönderilir.
+</p>
+
+<h2>2. Konum verisi</h2>
+
+<p>
+  Konumun yalnızca uygulama <strong>açıkken ve ön plandayken</strong> kullanılır.
+  Arka planda konum takibi yapılmaz; uygulama kapalıyken nerede olduğun bilinmez.
+</p>
+
+<p>Konum iki amaçla kullanılır:</p>
+<ul>
+  <li><strong>Yakındaki mekanları listelemek</strong> — yaklaşık konumun, çevrendeki
+      kafe, bar ve restoranları bulmak için kullanılır.</li>
+  <li><strong>Check-in</strong> — bir mekana check-in yaptığında, o andaki konumun
+      mekana gerçekten yakın olduğunu doğrulamak için kaydedilir.</li>
+</ul>
+
+<div class="note">
+  <strong>Konumun harita sağlayıcılarına gönderilmez.</strong> Mekan aramaları
+  OpenStreetMap altyapısına (Overpass ve Nominatim) doğrudan cihazından değil,
+  kendi sunucumuz üzerinden iletilir. Böylece bu üçüncü taraflar senin cihazını
+  veya kimliğini görmez.
+</div>
+
+<p>
+  IP adresin, gönderilen GPS konumuyla tutarlı olup olmadığını denetlemek için
+  kullanılır. Bu denetim <strong>tamamen sunucumuzda, çevrimdışı bir veritabanıyla</strong>
+  yapılır; IP adresin bu amaçla hiçbir dış servise gönderilmez.
+</p>
+
+<h2>3. Şifreleme</h2>
+
+<p>
+  Kullanıcı adın, telefon numaran ve mesajlarının içeriği veritabanında
+  <strong>AES-256-GCM ile şifrelenerek</strong> saklanır. Veritabanına doğrudan
+  erişen biri bu alanları okuyamaz. Tüm ağ trafiği HTTPS üzerinden taşınır.
+</p>
+
+<p>
+  Arama ve benzersizlik denetimi gereken alanlar (kullanıcı adı, telefon) için ayrıca
+  geri döndürülemez bir kriptografik özet (blind index) tutulur.
+</p>
+
+<h2>4. Cihaz kimliği ve hesap silme sonrası kalan veriler</h2>
+
+<p>
+  Uygulama ilk açıldığında cihazına rastgele bir tanımlayıcı üretilir. Bu tanımlayıcı
+  reklam kimliği değildir, reklam amacıyla kullanılmaz ve kimseyle paylaşılmaz.
+  Tek amacı şudur: bir mekanda birini engellediğinde, o kişi hesabını silip yeni bir
+  kullanıcı adıyla dönse bile aynı mekanda tekrar karşına çıkmasını önlemek.
+</p>
+
+<p>
+  Bu amacın gereği olarak <strong>cihaz tanımlayıcısı, hesabını sildiğinde de
+  cihazında ve engelleme kayıtlarında kalır.</strong> Uygulamayı cihazından
+  kaldırdığında silinir.
+</p>
+
+<h3>Hesabını sildiğinde ne olur</h3>
+
+<table>
+  <tr><th>Kalıcı olarak silinir</th><th>Silinmez</th></tr>
+  <tr>
+    <td>
+      Mesajların<br>
+      Fotoğrafların (sunucudaki dosyalar dahil)<br>
+      Göz teması ve bildirim kayıtların<br>
+      Biyografin, doğum tarihin, cinsiyetin<br>
+      Profil doğrulama fotoğrafın<br>
+      Engelleme kayıtların
+    </td>
+    <td>
+      Şifrelenmiş telefon numaran<br>
+      Cihaz tanımlayıcın<br>
+      Kullanıcı adı, anonim bir değerle değiştirilir
+    </td>
+  </tr>
+</table>
+
+<p>
+  Telefon numarası ve cihaz tanımlayıcısı, silinen hesapların hemen yeniden
+  açılarak engelleme ve kötüye kullanım önlemlerinin aşılmasını engellemek amacıyla
+  saklanır. Bu verilerin tamamen silinmesini talep edebilirsin — aşağıdaki
+  iletişim adresine yazman yeterli.
+</p>
+
+<h2>5. Üçüncü taraflar</h2>
+
+<table>
+  <tr><th>Hizmet</th><th>Paylaşılan veri</th><th>Amaç</th></tr>
+  <tr>
+    <td>SMS sağlayıcısı</td>
+    <td>Telefon numaran</td>
+    <td>Doğrulama kodu göndermek</td>
+  </tr>
+  <tr>
+    <td>Expo bildirim servisi</td>
+    <td>Bildirim jetonu, bildirim metni</td>
+    <td>Anlık bildirim iletmek</td>
+  </tr>
+  <tr>
+    <td>Harita döşeme sağlayıcısı</td>
+    <td>IP adresin, görüntülediğin harita bölgesi</td>
+    <td>Harita görsellerini yüklemek</td>
+  </tr>
+  <tr>
+    <td>Apple / Google / Yandex Haritalar</td>
+    <td>Yalnızca seçtiğin mekanın adresi</td>
+    <td>Yol tarifi — sadece sen "yol tarifi" düğmesine bastığında</td>
+  </tr>
+</table>
+
+<p>
+  Verilerin <strong>reklam amacıyla kullanılmaz, satılmaz ve pazarlama amacıyla
+  üçüncü taraflarla paylaşılmaz.</strong> Uygulamada reklam ağı veya üçüncü taraf
+  analitik izleyicisi bulunmaz.
+</p>
+
+<h2>6. Saklama süresi</h2>
+
+<ul>
+  <li>Hesap verileri, hesabın açık kaldığı sürece saklanır.</li>
+  <li>Mesajlar, eşleşme süresi dolduğunda veya hesabını sildiğinde silinir.</li>
+  <li>Check-in kayıtları, kötüye kullanım incelemeleri için sınırlı süre saklanır.</li>
+  <li>Doğrulama kodları kısa ömürlüdür ve kullanıldıktan sonra geçersiz olur.</li>
+</ul>
+
+<h2>7. Haklarınız</h2>
+
+<p>
+  KVKK md. 11 ve — Avrupa Birliği'nde bulunuyorsan — GDPR uyarınca şu haklara sahipsin:
+  verilerinin işlenip işlenmediğini öğrenme, bunlara erişme, düzeltilmesini veya
+  silinmesini isteme, işlemeye itiraz etme ve verilerini taşınabilir bir biçimde talep etme.
+</p>
+
+<p>
+  Bu haklarını kullanmak için <a href="mailto:[E-POSTA]">[E-POSTA]</a> adresine
+  yazabilirsin. Talebine en geç 30 gün içinde yanıt verilir. Hesabını uygulama
+  içinden de silebilirsin: <em>Profili Düzenle → Hesabı Sil</em>.
+</p>
+
+<h2>8. Yaş sınırı</h2>
+
+<p>
+  Socializer yalnızca <strong>18 yaş ve üzeri</strong> kullanıcılar içindir. Kayıt
+  sırasında doğum tarihi doğrulanır. 18 yaşından küçük birine ait bir hesap tespit
+  edilirse hesap kapatılır ve verileri silinir.
+</p>
+
+<h2>9. Değişiklikler</h2>
+
+<p>
+  Bu politika güncellenebilir. Önemli değişikliklerde uygulama içinden bilgilendirilirsin.
+  Sayfanın en üstündeki tarih, yürürlükteki sürümü gösterir.
+</p>
+
+<h2>10. İletişim</h2>
+
+<p>
+  Gizlilikle ilgili her türlü soru ve talebin için:
+  <a href="mailto:[E-POSTA]">[E-POSTA]</a>
+</p>
+
+<footer>
+  Socializer · [VERİ SORUMLUSU] · Son güncelleme [TARİH]
+</footer>
+
+</div>
+</body>
+</html>
