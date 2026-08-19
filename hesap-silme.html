@@ -1,0 +1,191 @@
+<title>Socializer — Hesap Silme</title>
+<style>
+  :root {
+    --ground: #ffffff;
+    --ink: #1c1614;
+    --ink-soft: #5d534e;
+    --accent: #c8452f;
+    --line: #e3dad5;
+    --box: #f7f4f2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #151110;
+      --ink: #f3ece9;
+      --ink-soft: #b0a49e;
+      --accent: #ff8f79;
+      --line: #332b29;
+      --box: #1e1918;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #151110;
+    --ink: #f3ece9;
+    --ink-soft: #b0a49e;
+    --accent: #ff8f79;
+    --line: #332b29;
+    --box: #1e1918;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 17px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 0.4rem; }
+  .sub { color: var(--ink-soft); margin: 0 0 2rem; }
+  h2 { font-size: 1.25rem; margin: 2.5rem 0 0.6rem; }
+  p, li { max-width: 62ch; }
+  a { color: var(--accent); }
+
+  ol.steps { padding-left: 1.3rem; }
+  ol.steps li { margin-bottom: 0.5rem; }
+
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 0.6rem 0.7rem; border-bottom: 1px solid var(--line); }
+  th { font-weight: 600; }
+  .scroller { overflow-x: auto; }
+
+  .box {
+    background: var(--box);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    padding: 1rem 1.15rem;
+    margin: 1.5rem 0;
+  }
+  .box > :first-child { margin-top: 0; }
+  .box > :last-child { margin-bottom: 0; }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+</style>
+
+<div class="wrap">
+
+<h1>Socializer — Hesap ve Veri Silme</h1>
+<p class="sub">
+  Geliştirici: Fırat Öncü Şener · Uygulama: Socializer (com.socializer.app)<br>
+  Son güncelleme: 19 Ağustos 2026
+</p>
+
+<p>
+  Bu sayfa, Socializer hesabını ve hesabına bağlı verileri nasıl sildireceğini anlatır.
+  İki yol var: uygulamanın içinden kendin silebilirsin ya da bize e-posta atarsın.
+</p>
+
+<h2>1. Uygulamadan silme</h2>
+
+<ol class="steps">
+  <li>Socializer'ı aç ve giriş yap.</li>
+  <li>Sol üstteki menü simgesine (☰) dokun.</li>
+  <li><strong>Güvenlik ve Gizlilik</strong> satırını seç.</li>
+  <li><strong>Hesap</strong> başlığı altındaki <strong>Hesabı Kalıcı Olarak Sil</strong> düğmesine dokun.</li>
+  <li>Çıkan uyarıyı okuyup <strong>Hesabımı Sil</strong> ile onayla.</li>
+</ol>
+
+<p>
+  Silme işlemi anında gerçekleşir. Onayladıktan sonra geri alınamaz ve aynı hesaba
+  bir daha giriş yapılamaz.
+</p>
+
+<h2>2. E-posta ile silme talebi</h2>
+
+<p>
+  Uygulamaya erişemiyorsan (telefonunu değiştirdiysen, uygulamayı kaldırdıysan ya da
+  hesabın askıya alındıysa) talebini e-postayla iletebilirsin:
+</p>
+
+<div class="box">
+  <p>
+    <strong><a href="mailto:oncu.sener@gmail.com?subject=Hesap%20Silme%20Talebi">oncu.sener@gmail.com</a></strong>
+  </p>
+  <p>
+    Konu satırına <em>Hesap Silme Talebi</em> yaz ve mesajda hesabındaki
+    <strong>takma adını</strong> ve <strong>telefon numaranı</strong> belirt. Talebi
+    <strong>30 gün içinde</strong> sonuçlandırır ve sana yazılı olarak bilgi veririz.
+  </p>
+</div>
+
+<h2>3. Hesabını silmeden veri silme</h2>
+
+<p>
+  Hesabını tamamen kapatmak istemiyorsan tek tek de silebilirsin: profil
+  fotoğraflarını profil düzenleme ekranından, bildirimleri bildirim listesinden
+  kaldırabilirsin. Daha kapsamlı bir talep için (örneğin sohbet geçmişinin silinmesi)
+  yukarıdaki adrese yazman yeterli.
+</p>
+
+<h2>4. Hangi veriler siliniyor</h2>
+
+<p>Hesap silindiğinde aşağıdakiler <strong>kalıcı olarak</strong> silinir:</p>
+
+<div class="scroller">
+<table>
+  <tr><th>Veri</th><th>Ne oluyor</th></tr>
+  <tr><td>Profil fotoğrafların ve avatarın</td><td>Veritabanı kaydı ve sunucudaki dosyalar birlikte silinir</td></tr>
+  <tr><td>Doğrulama fotoğrafın</td><td>Silinir</td></tr>
+  <tr><td>Gönderdiğin mesajlar</td><td>Silinir</td></tr>
+  <tr><td>Göz temasları ve eşleşmeler</td><td>Silinir, eşleşmeler kapatılır</td></tr>
+  <tr><td>Bildirimlerin</td><td>Silinir</td></tr>
+  <tr><td>Biyografi, doğum tarihi, cinsiyet</td><td>Silinir</td></tr>
+  <tr><td>Takma adın</td><td>Anonim bir değerle değiştirilir, geri getirilemez</td></tr>
+  <tr><td>Cihaz giriş anahtarın</td><td>Geçersiz kılınır — bu hesaba bir daha girilemez</td></tr>
+  <tr><td>Açık check-in'lerin</td><td>Kapatılır, mekan sayaçlarından düşülür</td></tr>
+</table>
+</div>
+
+<h2>5. Hangi veriler bir süre daha saklanıyor</h2>
+
+<p>
+  Üç bilgi hemen silinmez: <strong>telefon numaran</strong>, telefon numaranın
+  <strong>arama karşılığı (hash)</strong> ve <strong>cihaz tanımlayıcın</strong>.
+</p>
+
+<p>
+  Sebebi kötüye kullanımı önlemek: bu bilgiler olmadan, kurallar nedeniyle
+  yasaklanan biri hesabını silip aynı telefon ve cihazla temiz sayfa açabilirdi.
+  Bu kayıtlar başka hiçbir amaçla kullanılmaz, kimseyle paylaşılmaz ve profilinle
+  ilişkilendirilebilecek başka bir veriye bağlı değildir.
+</p>
+
+<div class="box">
+  <p>
+    <strong>Saklama süresi: 6 ay.</strong> Hesabının silinmesinden 180 gün sonra bu üç
+    kayıt da otomatik olarak silinir; bu işlem her gece çalışan bir görevle yapılır ve
+    ayrıca talep etmene gerek yoktur. Bu noktadan sonra sana ait hiçbir veri sistemde
+    kalmaz.
+  </p>
+</div>
+
+<p>
+  Ayrıca, yasal bir yükümlülük gerektirdiğinde (örneğin bir suç soruşturması kapsamında
+  resmi bir talep) ilgili kayıtlar yasanın öngördüğü süre boyunca saklanabilir. Böyle bir
+  durumda, hukuken mümkünse seni bilgilendiririz.
+</p>
+
+<h2>6. Sorular</h2>
+
+<p>
+  Silme süreciyle ilgili her türlü soru için
+  <a href="mailto:oncu.sener@gmail.com">oncu.sener@gmail.com</a> adresine yazabilirsin.
+  Verilerinin nasıl işlendiğinin tamamı için
+  <a href="./">gizlilik politikamıza</a> bakabilirsin.
+</p>
+
+<footer>
+  Socializer · Fırat Öncü Şener · Seyyitömer Mahallesi, Hüseyin Kazım Sokak No: 53, Fatih / İstanbul
+</footer>
+
+</div>
