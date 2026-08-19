@@ -137,10 +137,12 @@
 </ul>
 
 <div class="note">
-  <strong>Konumun harita sağlayıcılarına gönderilmez.</strong> Mekan aramaları
+  <strong>Tam konumun harita sağlayıcılarına gönderilmez.</strong> Mekan aramaları
   OpenStreetMap altyapısına (Overpass ve Nominatim) doğrudan cihazından değil,
-  kendi sunucumuz üzerinden iletilir. Böylece bu üçüncü taraflar senin cihazını
-  veya kimliğini görmez.
+  kendi sunucumuz üzerinden iletilir. Sunucu, sorguya koyduğu koordinatı önce
+  yaklaşık 110 metrelik bir ızgaraya yuvarlar — yani bu üçüncü taraflara giden
+  şey senin bulunduğun nokta değil, çevrendeki genel bölgedir. Kimliğin, cihazın
+  ve IP adresin bu sorgularda hiç yer almaz; istek bizim sunucumuzdan çıkar.
 </div>
 
 <p>
