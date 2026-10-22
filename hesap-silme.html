@@ -139,17 +139,21 @@
     Konu satırına <em>Hesap Silme Talebi</em> yaz ve mesajda hesabındaki
     <strong>takma adını</strong> ve <strong>telefon numaranı</strong> belirt. Hesabın sana ait
     olduğunu doğrulamak için ek bilgi isteyebiliriz. Talebi <strong>30 gün içinde</strong>
-    sonuçlandırır ve sana yazılı olarak bilgi veririz.
+    sonuçlandırır ve sana yazılı olarak bilgi veririz. Hesabın, uygulama içinden silmeyle aynı
+    kapsamda silinir (aşağıdaki 4. ve 5. bölümler).
   </p>
 </div>
 
 <h2>3. Hesabını silmeden veri silme</h2>
 
 <ul>
-  <li>Profil fotoğraflarını ve biyografini <strong>Profili Düzenle</strong> ekranından silebilirsin.</li>
+  <li>Profil fotoğraflarını ve biyografini <strong>Profili Düzenle</strong> ekranından kaldırabilirsin.
+      Kaldırdığın fotoğraf profilinden hemen çıkar ve uygulamada kimseye gösterilmez; sunucudaki
+      dosyası hemen silinmeyebilir. Silinmesini istersen yukarıdaki adrese yazman yeterli.</li>
   <li>Bildirimlerini bildirim listesinden tek tek ya da topluca silebilirsin.</li>
   <li>Sohbetler için bir şey yapman gerekmez: eşleşme bittikten 24 saat sonra mesajlar
-      otomatik olarak silinir.</li>
+      otomatik olarak silinir. Aranızda açık bir şikayet varsa sohbet inceleme bitene kadar, en
+      fazla 180 gün saklanır.</li>
   <li>Check-in anındaki GPS konumun 30 gün sonra otomatik olarak silinir.</li>
 </ul>
 
@@ -164,11 +168,11 @@
 <div class="scroller">
 <table>
   <tr><th>Veri</th><th>Ne oluyor</th></tr>
-  <tr><td>Profil fotoğrafların ve avatarın</td><td>Veritabanı kaydı ve sunucudaki dosyalar birlikte silinir</td></tr>
+  <tr><td>Hesabındaki profil fotoğrafların ve avatarın</td><td>Veritabanı kaydı ve sunucudaki dosyalar birlikte silinir</td></tr>
   <tr><td>Biyografi, doğum tarihi, cinsiyet</td><td>Silinir</td></tr>
   <tr><td>Takma adın</td><td>Anonim bir değerle değiştirilir, geri getirilemez</td></tr>
-  <tr><td>Doğrulama bilgilerin</td><td>Doğrulama fotoğrafı ve rozetin silinir</td></tr>
-  <tr><td>Gönderdiğin mesajlar</td><td>Silinir</td></tr>
+  <tr><td>Doğrulama bilgilerin</td><td>Rozetin ve doğrulama durumun silinir. İncelemesi bitmemiş bir doğrulama fotoğrafın varsa hesabınla bağlantısı silinir (dosyası için 5. bölüme bak).</td></tr>
+  <tr><td>Gönderdiğin mesajlar</td><td>Silinir. İstisna: aranızda açık bir şikayet bulunan sohbetlerdeki mesajların inceleme bitene kadar, eşleşmenin bitişinden en fazla 180 gün saklanır, sonra silinir.</td></tr>
   <tr><td>Göz temasların</td><td>Gönderdiklerin ve aldıkların silinir</td></tr>
   <tr><td>Bildirimler</td><td>Senin bildirimlerin ve başkalarının listesindeki seninle ilgili bildirimler silinir</td></tr>
   <tr><td>Engellemeler</td><td>Engellediğin kişiler ve mekan bazlı engel kayıtların silinir</td></tr>
@@ -185,9 +189,9 @@
   <tr><th>Veri</th><th>Ne kadar ve neden</th></tr>
   <tr>
     <td>Telefon numaran (şifreli), telefon numaranın arama özeti (hash) ve cihaz kimliğin</td>
-    <td><strong>6 ay.</strong> Kurallar nedeniyle kapatılan birinin hesabını silip aynı telefon ve
-        cihazla temiz sayfa açmasını önlemek için. Bu süre içinde aynı numarayla yeni bir hesap
-        doğrulanamaz.</td>
+    <td><strong>6 ay.</strong> Kurallara aykırı davranan birinin hesabını silip aynı numarayla hemen
+        temiz bir hesap açmasını zorlaştırmak ve cihaz kimliğine bağlı mekan engellerinin yeni bir
+        hesapla aşılmasını önlemek için. Bu süre içinde aynı numara yeni bir hesapta doğrulanamaz.</td>
   </tr>
   <tr>
     <td>Cihaz kimliğine bağlı mekan engelleri</td>
@@ -195,7 +199,7 @@
         hesap varsa, o hesabı da koruduğu için kalır.</td>
   </tr>
   <tr>
-    <td>Şikayet ve moderasyon kayıtları</td>
+    <td>Şikayet ve moderasyon kayıtları (yetkililerin hesapla ilgili notları dahil)</td>
     <td>Kullanıcı güvenliği için anonim hesaba bağlı kalır. Telefon ve cihaz kimliği 6 ay sonra
         silindiğinde bu kayıtların kimliğinle ilişkisi kalmaz.</td>
   </tr>
@@ -211,6 +215,29 @@
         mekan istatistikleri için kullanılır.</td>
   </tr>
   <tr>
+    <td>Bildirim jetonun (cihazına bildirim göndermek için kullanılan adres)</td>
+    <td>Uygulama cihazında kaldıkça bu cihaza genel duyurular gelmeye devam edebilir. Uygulamayı
+        kaldırdığında jeton geçersizleşir ve bir sonraki gönderimde sunucudan silinir. Hemen
+        silinmesini istersen yukarıdaki adrese yazabilirsin.</td>
+  </tr>
+  <tr>
+    <td>Daha önce profilinden kaldırdığın fotoğrafların ve incelemesi bitmemiş doğrulama
+        fotoğrafının dosyaları</td>
+    <td>Hesabınla bağlantısı kalmaz ve uygulamada kimseye gösterilmez, ancak sunucudan hemen
+        silinmeyebilir. Silinmesini istersen yukarıdaki adrese yazman yeterli.</td>
+  </tr>
+  <tr>
+    <td>SMS gönderim ve doğrulama kayıtları</td>
+    <td>Telefon numaranın özetiyle, hesabına bağlı olmadan tutulur; SMS kötüye kullanımını
+        sınırlamak için.</td>
+  </tr>
+  <tr>
+    <td>Hesap kaydının diğer alanları (ayarların, son çevrimiçi zamanın, Premium ve kurucu üyelik
+        bilgisi, davet kodun ve seni kimin davet ettiği, günlük mesaj ve fotoğraf denetimi
+        sayaçları)</td>
+    <td>Anonim hesaba bağlı kalır; adını, telefonunu veya fotoğrafını içermez.</td>
+  </tr>
+  <tr>
     <td>Satın alma ve abonelik kayıtları (varsa)</td>
     <td>Mali mevzuatın öngördüğü süre boyunca anonim hesaba bağlı saklanır.</td>
   </tr>
@@ -219,9 +246,10 @@
 
 <div class="box">
   <p>
-    <strong>6 ay sonra:</strong> Hesabının silinmesinden 180 gün sonra telefon numaran, telefon
-    özetin ve cihaz kimliğin her gece çalışan bir görevle otomatik olarak silinir; ayrıca talep
-    etmene gerek yoktur. Bu noktadan sonra kalan kayıtlar seninle ilişkilendirilemez.
+    <strong>6 ay sonra:</strong> Hesabının silinmesinden 180 gün sonra hesap kaydındaki telefon
+    numaran, telefon özetin ve cihaz kimliğin her gece çalışan bir görevle otomatik olarak
+    silinir; ayrıca talep etmene gerek yoktur. Bu noktadan sonra anonim hesap kaydı telefon
+    numaran veya cihazınla eşleştirilemez.
     Bu verilerin süre dolmadan silinmesini istersen yukarıdaki adrese yazabilirsin; talebini
     KVKK kapsamında değerlendirip sonucunu sana bildiririz.
   </p>

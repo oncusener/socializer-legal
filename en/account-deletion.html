@@ -139,17 +139,22 @@
     Use the subject line <em>Account Deletion Request</em> and include your account's
     <strong>nickname</strong> and <strong>phone number</strong>. We may ask for extra information
     to confirm that the account is yours. We will complete the request <strong>within 30 days</strong>
-    and confirm it to you in writing.
+    and confirm it to you in writing. Your account is deleted to the same extent as an in-app
+    deletion (sections 4 and 5 below).
   </p>
 </div>
 
 <h2>3. Deleting data without deleting your account</h2>
 
 <ul>
-  <li>You can remove your profile photos and bio on the <strong>Edit Profile</strong> screen.</li>
+  <li>You can remove your profile photos and bio on the <strong>Edit Profile</strong> screen. A photo
+      you remove disappears from your profile right away and is not shown to anyone in the app;
+      its file on our server may not be deleted right away. If you want it deleted, just write to
+      the address above.</li>
   <li>You can delete notifications one by one or all at once from the notification list.</li>
   <li>You don't need to do anything for chats: messages are deleted automatically 24 hours after
-      the match ends.</li>
+      the match ends. If there is an open report between you, the chat is kept until the review
+      is finished, at most 180 days.</li>
   <li>The GPS position saved at check-in is deleted automatically after 30 days.</li>
 </ul>
 
@@ -164,11 +169,11 @@
 <div class="scroller">
 <table>
   <tr><th>Data</th><th>What happens</th></tr>
-  <tr><td>Your profile photos and avatar</td><td>The database records and the files on our server are deleted together</td></tr>
+  <tr><td>The profile photos and avatar on your account</td><td>The database records and the files on our server are deleted together</td></tr>
   <tr><td>Bio, date of birth, gender</td><td>Deleted</td></tr>
   <tr><td>Your nickname</td><td>Replaced with an anonymous value; cannot be restored</td></tr>
-  <tr><td>Verification details</td><td>Your verification photo and badge are deleted</td></tr>
-  <tr><td>Messages you sent</td><td>Deleted</td></tr>
+  <tr><td>Verification details</td><td>Your badge and verification status are deleted. If a verification photo of yours is still waiting for review, its link to your account is removed (see section 5 for the file).</td></tr>
+  <tr><td>Messages you sent</td><td>Deleted. Exception: your messages in chats with an open report between you are kept until the review is finished, at most 180 days after the match ended, and then deleted.</td></tr>
   <tr><td>Your eye contacts</td><td>Both the ones you sent and the ones you received are deleted</td></tr>
   <tr><td>Notifications</td><td>Your notifications, and notifications about you in other people's lists, are deleted</td></tr>
   <tr><td>Blocks</td><td>The people you blocked and your venue-level block records are deleted</td></tr>
@@ -185,9 +190,10 @@
   <tr><th>Data</th><th>How long and why</th></tr>
   <tr>
     <td>Your phone number (encrypted), the lookup hash of your phone number and your device ID</td>
-    <td><strong>6 months.</strong> To stop someone whose account was closed for breaking the rules
-        from deleting it and starting over with the same phone and device. During this time the
-        same number can't be verified on a new account.</td>
+    <td><strong>6 months.</strong> To make it harder for someone who broke the rules to delete their
+        account and start over straight away with the same number, and to stop venue blocks tied
+        to the device ID from being bypassed with a new account. During this time the same number
+        can't be verified on a new account.</td>
   </tr>
   <tr>
     <td>Venue blocks tied to your device ID</td>
@@ -195,7 +201,7 @@
         same device, they are kept because they protect that account too.</td>
   </tr>
   <tr>
-    <td>Report and moderation records</td>
+    <td>Report and moderation records (including staff notes about the account)</td>
     <td>Kept for user safety, linked to the anonymised account. Once the phone number and device ID
         are deleted after 6 months, these records can no longer be linked to you.</td>
   </tr>
@@ -212,6 +218,30 @@
         anonymised account and used for venue statistics.</td>
   </tr>
   <tr>
+    <td>Your push token (the address used to send notifications to your device)</td>
+    <td>While the app stays on your device, general announcements may keep reaching it. When you
+        uninstall the app the token becomes invalid and is deleted from our server at the next
+        send. If you want it deleted right away, write to the address above.</td>
+  </tr>
+  <tr>
+    <td>Files of photos you removed from your profile earlier, and of a verification photo still
+        waiting for review</td>
+    <td>No longer linked to your account and not shown to anyone in the app, but they may not be
+        deleted from our server right away. If you want them deleted, just write to the address
+        above.</td>
+  </tr>
+  <tr>
+    <td>SMS sending and verification records</td>
+    <td>Kept with a hash of your phone number, not linked to your account, to limit SMS
+        abuse.</td>
+  </tr>
+  <tr>
+    <td>Other fields of the account record (your settings, last online time, Premium and founding
+        member details, your invite code and who invited you, daily message and photo moderation
+        counters)</td>
+    <td>Kept, linked to the anonymised account; they contain no name, phone number or photo.</td>
+  </tr>
+  <tr>
     <td>Purchase and subscription records (if any)</td>
     <td>Kept, linked to the anonymised account, for the period required by tax and accounting law.</td>
   </tr>
@@ -220,9 +250,10 @@
 
 <div class="box">
   <p>
-    <strong>After 6 months:</strong> 180 days after your account is deleted, your phone number,
-    phone hash and device ID are deleted automatically by a job that runs every night; you don't
-    need to ask. From then on, the remaining records can't be linked to you. If you want this
+    <strong>After 6 months:</strong> 180 days after your account is deleted, the phone number,
+    phone hash and device ID on the account record are deleted automatically by a job that runs
+    every night; you don't need to ask. From then on, the anonymised account record can't be
+    matched to your phone number or device. If you want this
     data deleted before then, write to the address above; we will assess your request under the
     KVKK and let you know the outcome.
   </p>

@@ -76,10 +76,10 @@
 <div class="note">
   <p><strong>In short</strong></p>
   <ul>
-    <li>No ads, no selling of data, no third-party analytics or tracking tools.</li>
+    <li>No ad networks, no selling of data, no third-party analytics or tracking tools.</li>
     <li>Your location is only used while the app is open. The raw GPS position saved at check-in is deleted after 30 days.</li>
-    <li>Messages are stored encrypted and deleted 24 hours after the match ends.</li>
-    <li>Authorised staff can see chat content only while reviewing a reported chat, and every access is logged.</li>
+    <li>Messages are stored encrypted and deleted 24 hours after the match ends; they are kept longer only while an open report is being reviewed.</li>
+    <li>Authorised staff can see chat content only when reviewing a chat between two people with a report between them, and every access is logged.</li>
     <li>Socializer is for people aged 18 and over only.</li>
   </ul>
 </div>
@@ -101,7 +101,7 @@
   </tr>
   <tr>
     <td>Phone number</td>
-    <td>Account verification; preventing fake, bulk or re-created accounts</td>
+    <td>Account verification; preventing more than one account per number and making fake or re-created accounts harder</td>
     <td>Performance of contract (c), legitimate interest (f)</td>
   </tr>
   <tr>
@@ -120,18 +120,18 @@
     <td>Performance of contract (c), legitimate interest (f)</td>
   </tr>
   <tr>
-    <td>Verification selfie (optional)</td>
-    <td>Granting the profile verification badge</td>
+    <td>Verification selfie</td>
+    <td>Granting the profile verification badge. Your profile must be verified before you can send chat messages.</td>
     <td>Performance of contract (c)</td>
   </tr>
   <tr>
     <td>Location (latitude/longitude)</td>
-    <td>Listing nearby venues, confirming that a check-in happens close to the venue, sending notifications about busy venues nearby and regional announcements</td>
+    <td>Listing nearby venues, confirming that a check-in happens close to the venue, sending notifications about busy venues nearby and our own regional announcements, investigating fake locations and abuse (authorised staff can see currently open check-ins on a map in our admin panel)</td>
     <td>Performance of contract (c), legitimate interest (f)</td>
   </tr>
   <tr>
     <td>Check-in records (venue, mode, duration, visibility choice, time)</td>
-    <td>Running Discover, showing how busy venues are (as anonymous counts), investigating abuse</td>
+    <td>Running Discover, showing how busy venues are (as anonymous counts), investigating abuse, producing our own usage statistics to improve the service</td>
     <td>Performance of contract (c), legitimate interest (f)</td>
   </tr>
   <tr>
@@ -151,7 +151,7 @@
   </tr>
   <tr>
     <td>Device ID (randomly generated)</td>
-    <td>Preventing blocks and sanctions from being bypassed with a new account</td>
+    <td>Preventing venue-level separations (a declined eye contact, an ended match and similar) from being bypassed with a new account on the same device, and stopping one-off benefits such as founding membership from being claimed again on the same device</td>
     <td>Legitimate interest (f)</td>
   </tr>
   <tr>
@@ -184,6 +184,14 @@
       Premium member, and the mode you chose (Flirt, Network, Chill).</li>
   <li>Only people who have <strong>checked in at the same venue</strong> can see you in Discover,
       depending on the visibility you chose when checking in.</li>
+  <li>Premium members can check in with <strong>Incognito</strong>: they see the people at the venue
+      without appearing in Discover, and only the person they send an eye contact to can see them.
+      So you may not see everyone who can see you in Discover.</li>
+  <li>People you came across at a venue, who sent you an eye contact or who matched with you can
+      open your profile later too. Once you delete your account, or if there is a block or report
+      between you, your profile is no longer visible to them.</li>
+  <li>While you are matched, the other person can see whether you are online and when you were
+      last seen. Premium members can see whether the messages they sent have been read.</li>
   <li>Your phone number, date of birth, exact location and device ID are
       <strong>never shown</strong> to other users.</li>
 </ul>
@@ -197,7 +205,8 @@
 
 <ul>
   <li><strong>Nearby venues:</strong> your location is sent to our server to find cafés, bars and
-      restaurants around you. It is not saved for this purpose.</li>
+      restaurants around you. It is not stored with your account; it may only end up in a technical
+      error log if a server error occurs.</li>
   <li><strong>Check-in:</strong> you can only check in at a venue that is within 3 km of you. To
       confirm this, your GPS position at that moment is written to the check-in record.
       <strong>This raw position is deleted automatically after 30 days</strong>; only the venue,
@@ -206,10 +215,14 @@
       notify you when a venue near you gets busy or when there is an announcement for your area.
       You may also be notified of announcements for a venue where you checked in before. You
       can turn notifications off at any time in your device settings.</li>
+  <li><strong>Admin panel:</strong> authorised staff can see currently open check-ins, with the
+      position recorded at check-in, nickname and profile photo, on a map in our admin panel. This
+      access is for investigating fake locations, abuse and security issues; the position leaves
+      the map once the check-in closes.</li>
 </ul>
 
 <div class="note">
-  <strong>Your exact location is not sent to outside services.</strong> Venue lists and venue
+  <strong>Our server does not send your exact location to outside services.</strong> Venue lists and venue
   search go to Google Places and OpenStreetMap (Overpass, Nominatim) through our own server,
   not from your device. The server first rounds the coordinate to a grid of about 110 metres
   (the venue list uses an even coarser grid), so these services receive your general area,
@@ -220,7 +233,11 @@
 <p>
   The map is drawn on your device by the Google Maps SDK. To load map images your device
   connects directly to Google, which receives your IP address and the map area you are viewing.
-  Google's own privacy terms apply to that data.
+  To show your own position on the map, the SDK uses your device's location on the device, and
+  the map is usually centred on where you are, so the map area Google receives can reveal your
+  approximate location. The SDK also collects its own technical data, such as a device
+  identifier, map interactions, crash and performance data. Google's own privacy terms apply to
+  that data.
 </p>
 
 <p>
@@ -242,7 +259,11 @@
       the question "is there a face in this photo?": <strong>no face recognition or face matching
       is performed, no biometric template is created</strong>, and the face data returned by
       Vision is not stored.</li>
-  <li>Your verification selfie is deleted from our server once the verification decision is made.</li>
+  <li>Your verification selfie is deleted from our server once the verification decision is made.
+      Your profile must be verified before you can send chat messages.</li>
+  <li>A photo you remove in Edit Profile disappears from your profile right away and is not shown
+      to anyone in the app; its file on our server may not be deleted right away. If you want it
+      deleted, write to us.</li>
   <li>Nicknames and bios go through an automatic filter for profanity, insults and sexual content.</li>
 </ul>
 
@@ -252,35 +273,41 @@
   <li>Message content is stored in our database <strong>encrypted with AES-256-GCM</strong>. Chats
       are text only; photos, videos and files cannot be sent.</li>
   <li><strong>When a match ends</strong> (the chat time runs out, the match is removed, one person
-      blocks the other or deletes their account), the messages in that chat are permanently
+      blocks or reports the other, or deletes their account), the messages in that chat are permanently
       deleted from our server <strong>24 hours later</strong>.</li>
   <li><strong>Exception:</strong> if there is an open report between the two people, the chat is
       kept until the review is finished and deleted once it is closed. In every case it is
       deleted no later than 180 days after the match ended.</li>
   <li><strong>Staff access:</strong> authorised staff in our admin panel can see the content of a
-      chat <strong>only if there is a report between its participants</strong>, and only to review
-      that report. Every view is logged together with who viewed it. The content of chats that
-      have not been reported cannot be read; only technical details (participants, date, number
-      of messages) are visible.</li>
+      chat <strong>only if there is a report on record between its two participants</strong>; this
+      access is for reviewing that report. Every view is logged together with who viewed it. The
+      content of chats between people with no report between them cannot be read; only technical
+      details (participants, date, number of messages) are visible.</li>
   <li>New-message notifications contain the sender's nickname and the first 40 characters of the
       message and are delivered through the notification services listed below. These previews
-      in your in-app notification list are deleted together with the messages.</li>
+      in your in-app notification list are stored unencrypted and deleted together with the
+      messages.</li>
 </ul>
 
 <h2>6. Encryption and security</h2>
 
 <p>
   Your nickname, phone number and message content are encrypted in our database with
-  AES-256-GCM, so someone with direct database access cannot read them. For fields that need to
+  AES-256-GCM, so someone with direct database access cannot read them. Exception: the texts in
+  your notification list (such as the nickname and message preview in match and new-message
+  notifications) are stored unencrypted. For fields that need to
   be searchable or unique (nickname, phone), we also keep an irreversible cryptographic hash
   (blind index). All traffic between the app and our server uses HTTPS.
 </p>
 
 <p>
   When the app is first opened it generates a random device ID on your device. It is not an
-  advertising ID, it is not derived from your hardware and it is not shared with anyone. Its only
-  purpose is to stop someone you have a block with from deleting their account and showing up
-  again from the same device with a new one. Uninstalling the app removes the copy on your device.
+  advertising ID, it is not derived from your hardware and it is not shared with anyone. It has two
+  purposes: to stop someone you have a venue-level separation with (a declined eye contact, an
+  ended match and similar) from showing up at that venue again with a new account on the same
+  device, and to stop one-off benefits such as founding membership from being claimed again on
+  the same device. Uninstalling the app removes the copy on your device; if you restore your
+  device from a backup (for example an Android backup), the ID may come back.
 </p>
 
 <h2>7. Third parties and international transfers</h2>
@@ -298,19 +325,24 @@
     <td>Venue list and venue search</td>
   </tr>
   <tr>
-    <td>OpenStreetMap services (Overpass, Nominatim)</td>
+    <td>OpenStreetMap services (Nominatim and public Overpass servers; one of them is run by VK in Russia)</td>
     <td>Rounded coordinate, search text, venue location</td>
     <td>Venue list, venue search, a venue's city/district</td>
   </tr>
   <tr>
     <td>Google Maps SDK (Google)</td>
-    <td>Your IP address, the map area you view, the SDK's technical data</td>
+    <td>Your IP address, the map area you view, the SDK's technical data (device identifier, map interactions, crash and performance data)</td>
     <td>Showing the map</td>
   </tr>
   <tr>
     <td>Expo push service, Apple (APNs), Google (Firebase Cloud Messaging)</td>
     <td>Push token, notification text</td>
     <td>Delivering push notifications</td>
+  </tr>
+  <tr>
+    <td>Expo (app updates)</td>
+    <td>Your IP address, app version and a random installation ID</td>
+    <td>Checking for and downloading app updates when the app opens</td>
   </tr>
   <tr>
     <td>Sentry</td>
@@ -341,16 +373,18 @@
 
 <p>
   Some of these providers are located outside Türkiye, so the data listed above is transferred
-  abroad to the extent each service requires. These transfers are made
-  <strong>in accordance with Article 9 of the KVKK</strong>, and each provider receives only the
-  minimum data needed for its service.
+  abroad to the extent each service requires. These transfers fall under Article 9 of the KVKK;
+  each provider receives only the minimum data needed for its service.
 </p>
 
 <p>
   Apart from this, your data is shared only with public authorities that are legally entitled to
   request it, upon a lawful request and to the extent the law requires. Your data is
-  <strong>not used for advertising, not sold and not shared with third parties for marketing.</strong>
-  The app contains no ad networks and no third-party analytics trackers.
+  <strong>not used for third-party advertising, not sold and not shared with third parties for
+  marketing.</strong> We may send you our own announcements as notifications (for example events
+  in your area or at venues you have visited, or new features); your check-in locations from the
+  last 30 days may be used for this. The app contains no ad networks and no third-party analytics
+  tools; we only produce statistics from our own records to improve the service.
 </p>
 
 <h2>8. Retention periods</h2>
@@ -363,12 +397,15 @@
   <tr><td>Messages</td><td>Deleted 24 hours after the match ends. If there is an open report, until the review ends, at most 180 days.</td></tr>
   <tr><td>Eye contact and match records (without message content)</td><td>As long as your account is open. On deletion, eye contacts are deleted and match records stay linked to the anonymised account.</td></tr>
   <tr><td>Notifications</td><td>Until you delete them or delete your account. Notifications with a message preview are deleted together with the messages.</td></tr>
+  <tr><td>Push token</td><td>Deleted when you sign out. If you uninstall the app, it is deleted at the next send once the notification service reports it as invalid. What happens when you delete your account is explained on the <a href="account-deletion.html">account deletion page</a>.</td></tr>
   <tr><td>Verification selfie</td><td>Until the verification decision</td></tr>
   <tr><td>Photos rejected by moderation</td><td>Never stored</td></tr>
-  <tr><td>Phone verification codes</td><td>Valid for 5 minutes; only irreversible hashes are kept</td></tr>
+  <tr><td>Photos you remove from your profile</td><td>No longer shown in the app from the moment you remove them; the file on our server may not be deleted right away. Write to us if you want it deleted.</td></tr>
+  <tr><td>Phone verification codes</td><td>Valid for 5 minutes; the code itself is not stored, only a hash of it</td></tr>
+  <tr><td>SMS sending and verification records</td><td>Kept with a hash of the phone number, not linked to your account, for as long as needed to limit SMS abuse</td></tr>
   <tr><td>Report and moderation records</td><td>Kept for user safety; after account deletion they stay linked to the anonymised account</td></tr>
   <tr><td>Phone number and device ID (after account deletion)</td><td>6 months, then deleted automatically</td></tr>
-  <tr><td>Server and error logs</td><td>A limited period, for security and debugging</td></tr>
+  <tr><td>Server and error logs</td><td>As long as needed for security and debugging. These logs may contain IP addresses and request addresses (which can include location).</td></tr>
   <tr><td>Support correspondence</td><td>As long as needed to resolve your request and any dispute</td></tr>
 </table>
 
@@ -377,8 +414,9 @@
 <p>
   You can delete your account in the app at any time: <em>Menu › Security &amp; Privacy › Delete
   Account Permanently</em>. Your profile, photos, the messages you sent, your eye contacts,
-  notifications, blocks and all check-in locations are deleted immediately. Your phone number
-  and device ID are kept for 6 more months to prevent abuse. The
+  notifications, blocks and all check-in locations are deleted immediately. Messages in chats
+  with an open report between you are kept until the review is finished, at most 180 days.
+  Your phone number and device ID are kept for 6 more months to prevent abuse. The
   <a href="account-deletion.html">account deletion page</a> explains in detail what is deleted
   and what is kept, and for how long.
 </p>
