@@ -34,5 +34,12 @@ Notlar:
 - Gizlilik 7. bölümdeki "SMS sağlayıcısı" satırı sağlayıcı adını vermez; canlıda sağlayıcı
   seçilince (`SMS_PROVIDER`: Netgsm Türkiye'de, Twilio ABD'de) adını yaz. Twilio seçilirse
   numara ve kod yurt dışına aktarılır; KVKK md. 9 güvencesini de belirt.
+- Gizlilik 8. bölüm (`#erken-erisim` / `#early-access`) web sitesindeki erken erişim formunu
+  anlatır ve `POST /api/v1/waitlist` sözleşmesine dayanır: e-posta, dil, kaynak, kayıt zamanı;
+  IP listeye yazılmaz, yalnız bellekte istek sınırlaması; açık rıza (KVKK md. 5/1); en fazla
+  12 ay sonra otomatik silme; tek seferlik lansman e-postası, İYS iletisi yok; barındırma
+  dışında üçüncü taraf yok. API'de bunlardan biri değişirse ya da lansman e-postası bir toplu
+  e-posta servisiyle gönderilirse (o servis üçüncü taraftır, 7. bölüme de ekle) bu bölümü
+  güncelle. Sitedeki formun onay metni bu bölüme bağlanmalıdır.
 - Her sayfanın üstünde dört sayfa arasında ve TR/EN karşılığına giden bağlantılar vardır.
   Bağlantılar görelidir; dış bağımlılık yoktur.
