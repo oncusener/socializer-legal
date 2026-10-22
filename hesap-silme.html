@@ -1,4 +1,11 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Socializer — Hesap Silme</title>
+<link rel="alternate" hreflang="tr" href="https://oncusener.github.io/socializer-legal/hesap-silme.html">
+<link rel="alternate" hreflang="en" href="https://oncusener.github.io/socializer-legal/en/account-deletion.html">
 <style>
   :root {
     --ground: #ffffff;
@@ -36,7 +43,14 @@
     line-height: 1.65;
     font-size: 17px;
   }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 1.75rem 1.25rem 5rem; }
+
+  .legal-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.1rem; margin: 0 0 2rem;
+               padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+  .legal-nav a { color: var(--ink-soft); text-decoration: none; }
+  .legal-nav a:hover { color: var(--accent); }
+  .legal-nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+  .legal-nav .lang { margin-left: auto; }
 
   h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 0.4rem; }
   .sub { color: var(--ink-soft); margin: 0 0 2rem; }
@@ -71,33 +85,43 @@
     font-size: 0.9rem;
   }
 </style>
-
+</head>
+<body>
 <div class="wrap">
+
+<nav class="legal-nav" aria-label="Yasal metinler">
+  <a href="index.html">Gizlilik</a>
+  <a href="kullanim-sartlari.html">Kullanım Şartları</a>
+  <a href="cocuk-guvenligi.html">Çocuk Güvenliği</a>
+  <a href="hesap-silme.html" aria-current="page">Hesap Silme</a>
+  <a class="lang" href="en/account-deletion.html" hreflang="en" lang="en">English</a>
+</nav>
 
 <h1>Socializer — Hesap ve Veri Silme</h1>
 <p class="sub">
-  Geliştirici: Fırat Öncü Şener · Uygulama: Socializer (com.socializer.app)<br>
-  Son güncelleme: 19 Ağustos 2026
+  Geliştirici: Fırat Öncü Şener · Uygulama: Socializer (Android: com.socializer.app · iOS: com.oncusener.socializer)<br>
+  Son güncelleme: 22 Ekim 2026
 </p>
 
 <p>
-  Bu sayfa, Socializer hesabını ve hesabına bağlı verileri nasıl sildireceğini anlatır.
-  İki yol var: uygulamanın içinden kendin silebilirsin ya da bize e-posta atarsın.
+  Bu sayfa, Socializer hesabını ve hesabına bağlı verileri nasıl sildireceğini, neyin hemen
+  silindiğini ve neyin ne kadar süre daha saklandığını anlatır. İki yol var: uygulamanın içinden
+  kendin silebilirsin ya da bize e-posta atarsın.
 </p>
 
 <h2>1. Uygulamadan silme</h2>
 
 <ol class="steps">
   <li>Socializer'ı aç ve giriş yap.</li>
-  <li>Sol üstteki menü simgesine (☰) dokun.</li>
+  <li>Harita ekranının sol üst köşesindeki profil fotoğrafına dokunarak menüyü aç.</li>
   <li><strong>Güvenlik ve Gizlilik</strong> satırını seç.</li>
   <li><strong>Hesap</strong> başlığı altındaki <strong>Hesabı Kalıcı Olarak Sil</strong> düğmesine dokun.</li>
   <li>Çıkan uyarıyı okuyup <strong>Hesabımı Sil</strong> ile onayla.</li>
 </ol>
 
 <p>
-  Silme işlemi anında gerçekleşir. Onayladıktan sonra geri alınamaz ve aynı hesaba
-  bir daha giriş yapılamaz.
+  Silme işlemi anında gerçekleşir ve oturumun kapanır. Onayladıktan sonra geri alınamaz ve
+  aynı hesaba bir daha giriş yapılamaz.
 </p>
 
 <h2>2. E-posta ile silme talebi</h2>
@@ -113,59 +137,93 @@
   </p>
   <p>
     Konu satırına <em>Hesap Silme Talebi</em> yaz ve mesajda hesabındaki
-    <strong>takma adını</strong> ve <strong>telefon numaranı</strong> belirt. Talebi
-    <strong>30 gün içinde</strong> sonuçlandırır ve sana yazılı olarak bilgi veririz.
+    <strong>takma adını</strong> ve <strong>telefon numaranı</strong> belirt. Hesabın sana ait
+    olduğunu doğrulamak için ek bilgi isteyebiliriz. Talebi <strong>30 gün içinde</strong>
+    sonuçlandırır ve sana yazılı olarak bilgi veririz.
   </p>
 </div>
 
 <h2>3. Hesabını silmeden veri silme</h2>
 
+<ul>
+  <li>Profil fotoğraflarını ve biyografini <strong>Profili Düzenle</strong> ekranından silebilirsin.</li>
+  <li>Bildirimlerini bildirim listesinden tek tek ya da topluca silebilirsin.</li>
+  <li>Sohbetler için bir şey yapman gerekmez: eşleşme bittikten 24 saat sonra mesajlar
+      otomatik olarak silinir.</li>
+  <li>Check-in anındaki GPS konumun 30 gün sonra otomatik olarak silinir.</li>
+</ul>
+
 <p>
-  Hesabını tamamen kapatmak istemiyorsan tek tek de silebilirsin: profil
-  fotoğraflarını profil düzenleme ekranından, bildirimleri bildirim listesinden
-  kaldırabilirsin. Daha kapsamlı bir talep için (örneğin sohbet geçmişinin silinmesi)
-  yukarıdaki adrese yazman yeterli.
+  Daha kapsamlı bir talep için yukarıdaki adrese yazman yeterli.
 </p>
 
-<h2>4. Hangi veriler siliniyor</h2>
+<h2>4. Hemen silinen veriler</h2>
 
-<p>Hesap silindiğinde aşağıdakiler <strong>kalıcı olarak</strong> silinir:</p>
+<p>Hesabını sildiğin anda aşağıdakiler <strong>kalıcı olarak</strong> silinir:</p>
 
 <div class="scroller">
 <table>
   <tr><th>Veri</th><th>Ne oluyor</th></tr>
   <tr><td>Profil fotoğrafların ve avatarın</td><td>Veritabanı kaydı ve sunucudaki dosyalar birlikte silinir</td></tr>
-  <tr><td>Doğrulama fotoğrafın</td><td>Silinir</td></tr>
-  <tr><td>Gönderdiğin mesajlar</td><td>Silinir</td></tr>
-  <tr><td>Göz temasları ve eşleşmeler</td><td>Silinir, eşleşmeler kapatılır</td></tr>
-  <tr><td>Bildirimlerin</td><td>Silinir</td></tr>
   <tr><td>Biyografi, doğum tarihi, cinsiyet</td><td>Silinir</td></tr>
   <tr><td>Takma adın</td><td>Anonim bir değerle değiştirilir, geri getirilemez</td></tr>
-  <tr><td>Cihaz giriş anahtarın</td><td>Geçersiz kılınır — bu hesaba bir daha girilemez</td></tr>
-  <tr><td>Açık check-in'lerin</td><td>Kapatılır, mekan sayaçlarından düşülür</td></tr>
+  <tr><td>Doğrulama bilgilerin</td><td>Doğrulama fotoğrafı ve rozetin silinir</td></tr>
+  <tr><td>Gönderdiğin mesajlar</td><td>Silinir</td></tr>
+  <tr><td>Göz temasların</td><td>Gönderdiklerin ve aldıkların silinir</td></tr>
+  <tr><td>Bildirimler</td><td>Senin bildirimlerin ve başkalarının listesindeki seninle ilgili bildirimler silinir</td></tr>
+  <tr><td>Engellemeler</td><td>Engellediğin kişiler ve mekan bazlı engel kayıtların silinir</td></tr>
+  <tr><td>Check-in konumların</td><td>Tüm check-in'lerindeki GPS konumu silinir; açık check-in'in kapatılır</td></tr>
+  <tr><td>Eşleşmelerin</td><td>Hepsi sona erer</td></tr>
+  <tr><td>Cihaz giriş anahtarın ve oturumun</td><td>Geçersiz kılınır; bu hesaba bir daha girilemez</td></tr>
 </table>
 </div>
 
-<h2>5. Hangi veriler bir süre daha saklanıyor</h2>
+<h2>5. Bir süre daha kalan veriler</h2>
 
-<p>
-  Üç bilgi hemen silinmez: <strong>telefon numaran</strong>, telefon numaranın
-  <strong>arama karşılığı (hash)</strong> ve <strong>cihaz tanımlayıcın</strong>.
-</p>
-
-<p>
-  Sebebi kötüye kullanımı önlemek: bu bilgiler olmadan, kurallar nedeniyle
-  yasaklanan biri hesabını silip aynı telefon ve cihazla temiz sayfa açabilirdi.
-  Bu kayıtlar başka hiçbir amaçla kullanılmaz, kimseyle paylaşılmaz ve profilinle
-  ilişkilendirilebilecek başka bir veriye bağlı değildir.
-</p>
+<div class="scroller">
+<table>
+  <tr><th>Veri</th><th>Ne kadar ve neden</th></tr>
+  <tr>
+    <td>Telefon numaran (şifreli), telefon numaranın arama özeti (hash) ve cihaz kimliğin</td>
+    <td><strong>6 ay.</strong> Kurallar nedeniyle kapatılan birinin hesabını silip aynı telefon ve
+        cihazla temiz sayfa açmasını önlemek için. Bu süre içinde aynı numarayla yeni bir hesap
+        doğrulanamaz.</td>
+  </tr>
+  <tr>
+    <td>Cihaz kimliğine bağlı mekan engelleri</td>
+    <td><strong>6 ay.</strong> Cihaz kimliğiyle birlikte silinir. Aynı cihazı kullanan başka bir
+        hesap varsa, o hesabı da koruduğu için kalır.</td>
+  </tr>
+  <tr>
+    <td>Şikayet ve moderasyon kayıtları</td>
+    <td>Kullanıcı güvenliği için anonim hesaba bağlı kalır. Telefon ve cihaz kimliği 6 ay sonra
+        silindiğinde bu kayıtların kimliğinle ilişkisi kalmaz.</td>
+  </tr>
+  <tr>
+    <td>Karşı tarafın sana gönderdiği mesajlar</td>
+    <td>Eşleşme hesabını sildiğin anda sona erdiği için <strong>24 saat</strong> içinde silinir.
+        Aranızda açık bir şikayet varsa inceleme bitene kadar, eşleşmenin bitişinden en fazla
+        <strong>180 gün</strong> saklanır ve inceleme kapanınca silinir.</td>
+  </tr>
+  <tr>
+    <td>Check-in ve eşleşme kayıtları</td>
+    <td>Konum ve mesaj içeriği olmadan (yalnızca mekan, mod ve saat) anonim hesaba bağlı kalır;
+        mekan istatistikleri için kullanılır.</td>
+  </tr>
+  <tr>
+    <td>Satın alma ve abonelik kayıtları (varsa)</td>
+    <td>Mali mevzuatın öngördüğü süre boyunca anonim hesaba bağlı saklanır.</td>
+  </tr>
+</table>
+</div>
 
 <div class="box">
   <p>
-    <strong>Saklama süresi: 6 ay.</strong> Hesabının silinmesinden 180 gün sonra bu üç
-    kayıt da otomatik olarak silinir; bu işlem her gece çalışan bir görevle yapılır ve
-    ayrıca talep etmene gerek yoktur. Bu noktadan sonra sana ait hiçbir veri sistemde
-    kalmaz.
+    <strong>6 ay sonra:</strong> Hesabının silinmesinden 180 gün sonra telefon numaran, telefon
+    özetin ve cihaz kimliğin her gece çalışan bir görevle otomatik olarak silinir; ayrıca talep
+    etmene gerek yoktur. Bu noktadan sonra kalan kayıtlar seninle ilişkilendirilemez.
+    Bu verilerin süre dolmadan silinmesini istersen yukarıdaki adrese yazabilirsin; talebini
+    KVKK kapsamında değerlendirip sonucunu sana bildiririz.
   </p>
 </div>
 
@@ -181,7 +239,7 @@
   Silme süreciyle ilgili her türlü soru için
   <a href="mailto:oncu.sener@gmail.com">oncu.sener@gmail.com</a> adresine yazabilirsin.
   Verilerinin nasıl işlendiğinin tamamı için
-  <a href="./">gizlilik politikamıza</a> bakabilirsin.
+  <a href="index.html">gizlilik politikamıza</a> bakabilirsin.
 </p>
 
 <footer>
@@ -189,3 +247,5 @@
 </footer>
 
 </div>
+</body>
+</html>

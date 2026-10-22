@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Socializer — Gizlilik Politikası</title>
+<link rel="alternate" hreflang="tr" href="https://oncusener.github.io/socializer-legal/">
+<link rel="alternate" hreflang="en" href="https://oncusener.github.io/socializer-legal/en/">
 <style>
   :root {
     --bg: #ffffff; --fg: #1a1412; --muted: #5b5450;
@@ -18,25 +20,28 @@
     margin: 0; background: var(--bg); color: var(--fg);
     font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 80px; }
+  .legal-nav { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 30px;
+               padding-bottom: 14px; border-bottom: 1px solid var(--line); font-size: .9rem; }
+  .legal-nav a { color: var(--muted); text-decoration: none; }
+  .legal-nav a:hover { color: var(--accent); }
+  .legal-nav a[aria-current="page"] { color: var(--fg); font-weight: 600; }
+  .legal-nav .lang { margin-left: auto; }
   h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 6px; }
   h2 { font-size: 1.2rem; margin: 40px 0 10px; padding-top: 18px; border-top: 1px solid var(--line); }
   h3 { font-size: 1rem; margin: 22px 0 6px; }
   .sub { color: var(--muted); margin: 0 0 8px; }
-  .todo { background: #fff4e5; border: 1px solid #f0c98a; color: #6b4b16;
-          padding: 14px 16px; border-radius: 10px; margin: 20px 0; font-size: .93rem; }
-  @media (prefers-color-scheme: dark) {
-    .todo { background: #2a1f10; border-color: #6b4f22; color: #f0c98a; }
-  }
   table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: .93rem; display: block; overflow-x: auto; }
   th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
   th { font-weight: 600; white-space: nowrap; }
   code { background: var(--card); padding: 1px 5px; border-radius: 4px; font-size: .88em; }
-  ul { padding-left: 22px; }
+  ul, ol { padding-left: 22px; }
   li { margin: 5px 0; }
   a { color: var(--accent); }
   .note { background: var(--card); border-left: 3px solid var(--accent);
           padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+  .note > :first-child { margin-top: 0; }
+  .note > :last-child { margin-bottom: 0; }
   footer { margin-top: 50px; padding-top: 18px; border-top: 1px solid var(--line);
            color: var(--muted); font-size: .88rem; }
 </style>
@@ -44,14 +49,23 @@
 <body>
 <div class="wrap">
 
-<h1>Socializer Gizlilik Politikası</h1>
-<p class="sub">Son güncelleme: <strong>19 Ağustos 2026</strong> · Sürüm 1.0</p>
+<nav class="legal-nav" aria-label="Yasal metinler">
+  <a href="index.html" aria-current="page">Gizlilik</a>
+  <a href="kullanim-sartlari.html">Kullanım Şartları</a>
+  <a href="cocuk-guvenligi.html">Çocuk Güvenliği</a>
+  <a href="hesap-silme.html">Hesap Silme</a>
+  <a class="lang" href="en/index.html" hreflang="en" lang="en">English</a>
+</nav>
 
+<h1>Socializer Gizlilik Politikası</h1>
+<p class="sub">Son güncelleme: <strong>22 Ekim 2026</strong> · Sürüm 2.0</p>
 
 <p>
-  Socializer, çevrendeki mekanlarda bulunan insanlarla tanışmanı sağlayan bir mobil
-  uygulamadır. Bu politika, uygulamayı kullandığında hangi verilerin işlendiğini,
-  neden işlendiğini ve bunlar üzerinde hangi haklara sahip olduğunu açıklar.
+  Socializer, aynı mekanda bulunan insanlarla tanışmanı sağlayan bir mobil uygulamadır.
+  Bu politika, uygulamayı kullandığında hangi kişisel verilerin işlendiğini, neden ve
+  hangi hukuki dayanakla işlendiğini, kimlerle paylaşıldığını, ne kadar saklandığını ve
+  hangi haklara sahip olduğunu anlatır. Aynı zamanda 6698 sayılı Kişisel Verilerin
+  Korunması Kanunu (KVKK) md. 10 kapsamındaki aydınlatma metnidir.
 </p>
 
 <p>
@@ -59,231 +73,373 @@
   İletişim: <a href="mailto:oncu.sener@gmail.com">oncu.sener@gmail.com</a>
 </p>
 
-<h2>1. İşlenen veriler</h2>
+<div class="note">
+  <p><strong>Kısaca</strong></p>
+  <ul>
+    <li>Reklam yok, veri satışı yok, üçüncü taraf analitik veya izleme aracı yok.</li>
+    <li>Konumun yalnızca uygulama açıkken kullanılır. Check-in anındaki ham GPS konumun 30 gün sonra silinir.</li>
+    <li>Mesajlar şifreli saklanır ve eşleşme bittikten 24 saat sonra silinir.</li>
+    <li>Sohbet içeriğini yetkili ekip yalnızca şikayet edilmiş bir sohbeti incelerken görebilir ve her erişim kayda geçer.</li>
+    <li>Socializer yalnızca 18 yaş ve üzeri içindir.</li>
+  </ul>
+</div>
+
+<h2>1. İşlenen veriler, amaçları ve hukuki dayanakları</h2>
+
+<p>
+  Verilerin uygulama üzerinden, elektronik ortamda ve otomatik yollarla toplanır. Hukuki
+  dayanak sütunundaki harfler KVKK md. 5/2'deki bentleri gösterir: (c) sözleşmenin kurulması
+  veya ifası, (f) meşru menfaat.
+</p>
 
 <table>
-  <tr><th>Veri</th><th>Neden</th><th>Hukuki dayanak</th></tr>
+  <tr><th>Veri</th><th>Amaç</th><th>Hukuki dayanak</th></tr>
   <tr>
-    <td>Kullanıcı adı (nickname)</td>
-    <td>Hesabını tanımlamak, diğer kullanıcılara göstermek</td>
-    <td>Sözleşmenin ifası</td>
+    <td>Takma ad</td>
+    <td>Hesabını tanımlamak ve diğer kullanıcılara göstermek</td>
+    <td>Sözleşmenin ifası (c)</td>
   </tr>
   <tr>
     <td>Telefon numarası</td>
-    <td>Hesap doğrulama, sahte hesapları önleme</td>
-    <td>Sözleşmenin ifası, meşru menfaat</td>
+    <td>Hesap doğrulama; sahte, toplu veya kapatıldıktan sonra yeniden açılan hesapları önlemek</td>
+    <td>Sözleşmenin ifası (c), meşru menfaat (f)</td>
   </tr>
   <tr>
     <td>Doğum tarihi</td>
-    <td>18 yaş sınırını uygulamak, yaş gösterimi</td>
-    <td>Hukuki yükümlülük</td>
+    <td>18 yaş sınırını uygulamak. Diğer kullanıcılara yalnızca yaşın gösterilir, doğum tarihin gösterilmez.</td>
+    <td>Sözleşmenin ifası (c), meşru menfaat (f): reşit olmayanların korunması</td>
   </tr>
   <tr>
-    <td>Cinsiyet, biyografi</td>
-    <td>Profilini oluşturmak (isteğe bağlı)</td>
-    <td>Açık rıza</td>
+    <td>Cinsiyet, biyografi (isteğe bağlı)</td>
+    <td>Profilini oluşturmak</td>
+    <td>Sözleşmenin ifası (c)</td>
   </tr>
   <tr>
-    <td>Fotoğraflar</td>
-    <td>Profil gösterimi ve isteğe bağlı profil doğrulama</td>
-    <td>Açık rıza</td>
+    <td>Profil fotoğrafları</td>
+    <td>Profilini göstermek; uygunsuz içerik ve sahte profil denetimi</td>
+    <td>Sözleşmenin ifası (c), meşru menfaat (f)</td>
+  </tr>
+  <tr>
+    <td>Doğrulama selfie'si (isteğe bağlı)</td>
+    <td>Profil doğrulama rozeti vermek</td>
+    <td>Sözleşmenin ifası (c)</td>
   </tr>
   <tr>
     <td>Konum (enlem/boylam)</td>
-    <td>Yakındaki mekanları listelemek, check-in yapmak</td>
-    <td>Açık rıza</td>
+    <td>Yakındaki mekanları listelemek, check-in'in mekana yakın yapıldığını doğrulamak, yakındaki hareketli mekanlar ve bölgesel duyurular için bildirim göndermek</td>
+    <td>Sözleşmenin ifası (c), meşru menfaat (f)</td>
+  </tr>
+  <tr>
+    <td>Check-in kayıtları (mekan, mod, süre, görünürlük seçimi, saat)</td>
+    <td>Keşfet'i çalıştırmak, mekan yoğunluğunu (anonim sayılarla) göstermek, kötüye kullanımı incelemek</td>
+    <td>Sözleşmenin ifası (c), meşru menfaat (f)</td>
+  </tr>
+  <tr>
+    <td>Göz temasları, eşleşmeler, mesajlar</td>
+    <td>Tanışma ve kısa sohbet</td>
+    <td>Sözleşmenin ifası (c)</td>
+  </tr>
+  <tr>
+    <td>Şikayet, engelleme ve moderasyon kayıtları</td>
+    <td>Kullanıcıları korumak, kural ihlallerini incelemek ve yaptırım uygulamak</td>
+    <td>Meşru menfaat (f)</td>
   </tr>
   <tr>
     <td>IP adresi</td>
-    <td>Sahte konum (fake GPS/VPN) tespiti</td>
-    <td>Meşru menfaat — dolandırıcılık önleme</td>
+    <td>Sahte konum (fake GPS/VPN) tespiti, güvenlik</td>
+    <td>Meşru menfaat (f)</td>
   </tr>
   <tr>
-    <td>Cihaz kimliği</td>
-    <td>Engellediğin kişilerin yeni hesapla karşına çıkmasını önlemek</td>
-    <td>Meşru menfaat — kullanıcı güvenliği</td>
-  </tr>
-  <tr>
-    <td>Mesajlar</td>
-    <td>Eşleştiğin kişiyle sohbet</td>
-    <td>Sözleşmenin ifası</td>
+    <td>Cihaz kimliği (rastgele üretilir)</td>
+    <td>Engellerin ve yaptırımların yeni bir hesapla aşılmasını önlemek</td>
+    <td>Meşru menfaat (f)</td>
   </tr>
   <tr>
     <td>Bildirim jetonu</td>
     <td>Anlık bildirim göndermek</td>
-    <td>Açık rıza</td>
+    <td>Sözleşmenin ifası (c)</td>
+  </tr>
+  <tr>
+    <td>Premium, abonelik ve davet bilgileri</td>
+    <td>Premium ayrıcalıklarını ve davet ödüllerini sağlamak (seni kimin davet ettiği kaydedilir)</td>
+    <td>Sözleşmenin ifası (c)</td>
+  </tr>
+  <tr>
+    <td>Destek yazışmaları (e-posta adresin ve mesajın)</td>
+    <td>Talebini yanıtlamak</td>
+    <td>Meşru menfaat (f)</td>
   </tr>
 </table>
 
 <p>
   Hesap oluştururken <strong>parola kullanılmaz</strong>. Kimlik doğrulama, cihazında
-  üretilen ve cihazından hiç çıkmayan bir Ed25519 imza anahtarıyla yapılır; sunucuya
-  yalnızca açık anahtar gönderilir.
+  üretilen ve cihazının güvenli deposundan hiç çıkmayan bir Ed25519 imza anahtarıyla yapılır;
+  sunucuya yalnızca açık anahtar gönderilir. Gerçek adını, e-posta adresini veya kimlik
+  belgeni istemeyiz.
 </p>
 
-<h2>2. Konum verisi</h2>
+<h2>2. Diğer kullanıcılar neyi görür</h2>
+
+<ul>
+  <li>Takma adın, yaşın, cinsiyetin, biyografin, onaylanmış fotoğrafların, doğrulama rozetin,
+      Premium üye olup olmadığın ve seçtiğin mod (Flört, Network, Chill).</li>
+  <li>Seni Keşfet'te yalnızca <strong>aynı mekana check-in yapmış</strong> kişiler, check-in
+      sırasında yaptığın görünürlük seçimine göre görebilir.</li>
+  <li>Telefon numaran, doğum tarihin, tam konumun ve cihaz kimliğin diğer kullanıcılara
+      <strong>hiçbir zaman gösterilmez</strong>.</li>
+</ul>
+
+<h2>3. Konum verisi</h2>
 
 <p>
-  Konumun yalnızca uygulama <strong>açıkken ve ön plandayken</strong> kullanılır.
-  Arka planda konum takibi yapılmaz; uygulama kapalıyken nerede olduğun bilinmez.
+  Konumun yalnızca uygulama <strong>açıkken ve ön plandayken</strong> kullanılır. Arka planda
+  konum takibi yapılmaz; uygulama kapalıyken nerede olduğun bilinmez.
 </p>
 
-<p>Konum iki amaçla kullanılır:</p>
 <ul>
-  <li><strong>Yakındaki mekanları listelemek</strong> — yaklaşık konumun, çevrendeki
-      kafe, bar ve restoranları bulmak için kullanılır.</li>
-  <li><strong>Check-in</strong> — bir mekana check-in yaptığında, o andaki konumun
-      mekana gerçekten yakın olduğunu doğrulamak için kaydedilir.</li>
+  <li><strong>Yakındaki mekanlar:</strong> Konumun, çevrendeki kafe, bar ve restoranları
+      bulmak için sunucumuza gönderilir. Bu istekte konumun kaydedilmez.</li>
+  <li><strong>Check-in:</strong> Bir mekana yalnızca ona en fazla 3 km uzaklıktayken check-in
+      yapabilirsin. Bunu doğrulamak için o andaki GPS konumun check-in kaydına yazılır.
+      <strong>Bu ham konum 30 gün sonra otomatik olarak silinir</strong>; kayıtta yalnızca mekan,
+      mod ve saat kalır.</li>
+  <li><strong>Bildirimler:</strong> Son 30 gün içindeki check-in konumların, yakınındaki bir
+      mekan hareketlendiğinde veya bölgene özel bir duyuru yapıldığında sana bildirim göndermek
+      için kullanılabilir. Daha önce check-in yaptığın bir mekana özel duyurular da sana
+      bildirim olarak gelebilir. Bildirimleri cihazının ayarlarından istediğin zaman
+      kapatabilirsin.</li>
 </ul>
 
 <div class="note">
-  <strong>Tam konumun harita sağlayıcılarına gönderilmez.</strong> Mekan aramaları
-  OpenStreetMap altyapısına (Overpass ve Nominatim) doğrudan cihazından değil,
-  kendi sunucumuz üzerinden iletilir. Sunucu, sorguya koyduğu koordinatı önce
-  yaklaşık 110 metrelik bir ızgaraya yuvarlar — yani bu üçüncü taraflara giden
-  şey senin bulunduğun nokta değil, çevrendeki genel bölgedir. Kimliğin, cihazın
-  ve IP adresin bu sorgularda hiç yer almaz; istek bizim sunucumuzdan çıkar.
+  <strong>Tam konumun dış servislere gönderilmez.</strong> Mekan listesi ve mekan araması,
+  cihazından değil kendi sunucumuz üzerinden Google Places ve OpenStreetMap (Overpass,
+  Nominatim) servislerine iletilir. Sunucu koordinatı önce yaklaşık 110 metrelik bir
+  ızgaraya yuvarlar (mekan listesinde ızgara daha da kabadır). Yani bu servislere giden şey
+  bulunduğun nokta değil, çevrendeki genel bölgedir. Arama yaptığında yazdığın arama metni de
+  iletilir. Kimliğin, cihaz kimliğin ve IP adresin bu sorgularda yer almaz; istek bizim
+  sunucumuzdan çıkar.
 </div>
 
 <p>
-  IP adresin, gönderilen GPS konumuyla tutarlı olup olmadığını denetlemek için
-  kullanılır. Bu denetim <strong>tamamen sunucumuzda, çevrimdışı bir veritabanıyla</strong>
-  yapılır; IP adresin bu amaçla hiçbir dış servise gönderilmez.
-</p>
-
-<h2>3. Şifreleme</h2>
-
-<p>
-  Kullanıcı adın, telefon numaran ve mesajlarının içeriği veritabanında
-  <strong>AES-256-GCM ile şifrelenerek</strong> saklanır. Veritabanına doğrudan
-  erişen biri bu alanları okuyamaz. Tüm ağ trafiği HTTPS üzerinden taşınır.
+  Harita, cihazında çalışan Google Haritalar SDK'sı ile çizilir. Harita görüntülerini yüklemek
+  için cihazın doğrudan Google'a bağlanır; bu sırada IP adresin ve görüntülediğin harita bölgesi
+  Google'a ulaşır. Bu veriler için Google'ın kendi gizlilik koşulları geçerlidir.
 </p>
 
 <p>
-  Arama ve benzersizlik denetimi gereken alanlar (kullanıcı adı, telefon) için ayrıca
-  geri döndürülemez bir kriptografik özet (blind index) tutulur.
+  IP adresin, gönderilen GPS konumuyla tutarlı olup olmadığını denetlemek için kullanılır. Bu
+  denetim <strong>tamamen sunucumuzda, çevrimdışı bir veritabanıyla</strong> yapılır; IP adresin bu
+  amaçla hiçbir dış servise gönderilmez ve veritabanına kaydedilmez. Ciddi bir tutarsızlık
+  görülürse güvenlik amacıyla sunucu kayıtlarına yazılır.
 </p>
 
-<h2>4. Cihaz kimliği ve hesap silme sonrası kalan veriler</h2>
+<h2>4. Fotoğraflar ve içerik denetimi</h2>
+
+<ul>
+  <li>Yüklediğin her fotoğraf sunucuda yeniden işlenir; konum (GPS) ve EXIF gibi
+      <strong>meta veriler tamamen silinir</strong>.</li>
+  <li>Fotoğraflar Google Cloud Vision ile otomatik olarak denetlenir: çıplaklık veya şiddet
+      içerenler reddedilir ve hiç saklanmaz, şüpheli olanlar yayına girmeden önce yetkili
+      incelemesine alınır.</li>
+  <li>Aynı denetimde, sahte profilleri önlemek için fotoğrafta bir yüz olup olmadığına bakılır.
+      Bu yalnızca "fotoğrafta yüz var mı?" sorusunun yanıtıdır: <strong>yüz tanıma veya yüz
+      eşleştirme yapılmaz, biyometrik şablon oluşturulmaz</strong> ve Vision'dan dönen yüz
+      bilgisi saklanmaz.</li>
+  <li>Doğrulama selfie'n, doğrulama kararı verildiğinde sunucudan silinir.</li>
+  <li>Takma ad ve biyografiler, küfür, hakaret ve cinsel içeriğe karşı otomatik bir metin
+      filtresinden geçer.</li>
+</ul>
+
+<h2>5. Mesajlar ve sohbet içeriği</h2>
+
+<ul>
+  <li>Mesajların içeriği veritabanında <strong>AES-256-GCM ile şifrelenerek</strong> saklanır.
+      Sohbette yalnızca metin gönderilebilir; fotoğraf, video veya dosya gönderilemez.</li>
+  <li><strong>Eşleşme bittiğinde</strong> (sohbet süresi dolduğunda, eşleşme kaldırıldığında,
+      taraflardan biri diğerini engellediğinde ya da hesabını sildiğinde) o sohbetteki
+      mesajlar <strong>24 saat sonra</strong> sunucudan kalıcı olarak silinir.</li>
+  <li><strong>İstisna:</strong> İki taraf arasında henüz sonuçlanmamış bir şikayet varsa, sohbet
+      inceleme bitene kadar saklanır ve inceleme kapanınca silinir. Her durumda eşleşmenin
+      bitişinden en geç 180 gün sonra silinir.</li>
+  <li><strong>Yetkili erişimi:</strong> Yönetim panelindeki yetkililer bir sohbetin içeriğini
+      <strong>yalnızca o sohbetin tarafları arasında bir şikayet varsa</strong>, şikayeti incelemek
+      için görebilir. Her görüntüleme, kimin baktığıyla birlikte kayda geçer. Şikayet edilmemiş
+      sohbetlerin içeriği okunamaz; yalnızca teknik bilgiler (taraflar, tarih, mesaj sayısı)
+      görülebilir.</li>
+  <li>Yeni mesaj bildirimi, gönderenin takma adını ve mesajın ilk 40 karakterini içerir ve
+      aşağıda anlatılan bildirim servisleri üzerinden iletilir. Uygulamadaki bildirim listende
+      duran bu önizlemeler de mesajlarla birlikte silinir.</li>
+</ul>
+
+<h2>6. Şifreleme ve güvenlik</h2>
 
 <p>
-  Uygulama ilk açıldığında cihazına rastgele bir tanımlayıcı üretilir. Bu tanımlayıcı
-  reklam kimliği değildir, reklam amacıyla kullanılmaz ve kimseyle paylaşılmaz.
-  Tek amacı şudur: bir mekanda birini engellediğinde, o kişi hesabını silip yeni bir
-  kullanıcı adıyla dönse bile aynı mekanda tekrar karşına çıkmasını önlemek.
+  Takma adın, telefon numaran ve mesajlarının içeriği veritabanında AES-256-GCM ile şifrelenir;
+  veritabanına doğrudan erişen biri bu alanları okuyamaz. Arama ve benzersizlik denetimi
+  gereken alanlar (takma ad, telefon) için ayrıca geri döndürülemez bir kriptografik özet
+  (blind index) tutulur. Uygulama ile sunucu arasındaki tüm trafik HTTPS üzerinden taşınır.
 </p>
 
 <p>
-  Bu amacın gereği olarak <strong>cihaz tanımlayıcısı, hesabını sildiğinde de
-  cihazında ve engelleme kayıtlarında kalır.</strong> Uygulamayı cihazından
-  kaldırdığında silinir.
+  Uygulama ilk açıldığında cihazında rastgele bir cihaz kimliği üretilir. Bu kimlik reklam
+  kimliği değildir, donanımından türetilmez ve kimseyle paylaşılmaz. Tek amacı, bir kişiyle
+  aranda engel varken o kişinin hesabını silip yeni bir hesapla aynı cihazdan karşına
+  çıkmasını önlemektir. Uygulamayı cihazından kaldırdığında cihazdaki kopyası silinir.
 </p>
 
-<h3>Hesabını sildiğinde ne olur</h3>
-
-<table>
-  <tr><th>Kalıcı olarak silinir</th><th>Silinmez</th></tr>
-  <tr>
-    <td>
-      Mesajların<br>
-      Fotoğrafların (sunucudaki dosyalar dahil)<br>
-      Göz teması ve bildirim kayıtların<br>
-      Biyografin, doğum tarihin, cinsiyetin<br>
-      Profil doğrulama fotoğrafın<br>
-      Engelleme kayıtların
-    </td>
-    <td>
-      Şifrelenmiş telefon numaran<br>
-      Cihaz tanımlayıcın<br>
-      Kullanıcı adı, anonim bir değerle değiştirilir
-    </td>
-  </tr>
-</table>
-
-<p>
-  Telefon numarası ve cihaz tanımlayıcısı, silinen hesapların hemen yeniden
-  açılarak engelleme ve kötüye kullanım önlemlerinin aşılmasını engellemek amacıyla
-  saklanır. Bu verilerin tamamen silinmesini talep edebilirsin — aşağıdaki
-  iletişim adresine yazman yeterli.
-</p>
-
-<h2>5. Üçüncü taraflar</h2>
+<h2>7. Üçüncü taraflar ve yurt dışına aktarım</h2>
 
 <table>
   <tr><th>Hizmet</th><th>Paylaşılan veri</th><th>Amaç</th></tr>
   <tr>
-    <td>SMS sağlayıcısı</td>
-    <td>Telefon numaran</td>
-    <td>Doğrulama kodu göndermek</td>
+    <td>Google Cloud Vision (Google)</td>
+    <td>Yüklediğin fotoğraf (meta verisi silinmiş)</td>
+    <td>Uygunsuz içerik denetimi ve yüz var mı kontrolü</td>
   </tr>
   <tr>
-    <td>Expo bildirim servisi</td>
+    <td>Google Places (Google)</td>
+    <td>Yuvarlanmış koordinat, arama metni</td>
+    <td>Mekan listesi ve mekan araması</td>
+  </tr>
+  <tr>
+    <td>OpenStreetMap servisleri (Overpass, Nominatim)</td>
+    <td>Yuvarlanmış koordinat, arama metni, mekan konumu</td>
+    <td>Mekan listesi, mekan araması, mekanın şehir/ilçe bilgisi</td>
+  </tr>
+  <tr>
+    <td>Google Haritalar SDK (Google)</td>
+    <td>IP adresin, görüntülediğin harita bölgesi, SDK'nın teknik verileri</td>
+    <td>Haritayı göstermek</td>
+  </tr>
+  <tr>
+    <td>Expo bildirim servisi, Apple (APNs), Google (Firebase Cloud Messaging)</td>
     <td>Bildirim jetonu, bildirim metni</td>
     <td>Anlık bildirim iletmek</td>
   </tr>
   <tr>
-    <td>Harita döşeme sağlayıcısı</td>
-    <td>IP adresin, görüntülediğin harita bölgesi</td>
-    <td>Harita görsellerini yüklemek</td>
+    <td>Sentry</td>
+    <td>Sunucuda oluşan hata kayıtları. IP adresi ve varsayılan kişisel veri gönderimi kapalıdır.</td>
+    <td>Teknik hataları tespit edip düzeltmek</td>
   </tr>
   <tr>
-    <td>Apple / Google / Yandex Haritalar</td>
-    <td>Yalnızca seçtiğin mekanın adresi</td>
-    <td>Yol tarifi — sadece sen "yol tarifi" düğmesine bastığında</td>
+    <td>SMS sağlayıcısı</td>
+    <td>Telefon numaran, doğrulama kodu</td>
+    <td>Doğrulama kodu göndermek</td>
+  </tr>
+  <tr>
+    <td>Barındırma (hosting) sağlayıcısı</td>
+    <td>Sunucuda saklanan veriler</td>
+    <td>Uygulamanın sunucularını çalıştırmak (yalnızca altyapı hizmeti)</td>
+  </tr>
+  <tr>
+    <td>Apple App Store, Google Play</td>
+    <td>Satın alma kaydı. Kart bilgilerin bize hiç ulaşmaz.</td>
+    <td>Ücretli özellikler satışa açıldığında ödemeyi almak</td>
+  </tr>
+  <tr>
+    <td>Apple, Google veya Yandex Haritalar</td>
+    <td>Seçtiğin mekanın konumu</td>
+    <td>Yol tarifi. Yalnızca "yol tarifi" düğmesine bastığında, kendi uygulamaları açılır.</td>
   </tr>
 </table>
 
 <p>
-  Verilerin <strong>reklam amacıyla kullanılmaz, satılmaz ve pazarlama amacıyla
-  üçüncü taraflarla paylaşılmaz.</strong> Uygulamada reklam ağı veya üçüncü taraf
-  analitik izleyicisi bulunmaz.
+  Bu hizmet sağlayıcılarının bir kısmı Türkiye dışında bulunduğundan, yukarıda sayılan veriler
+  hizmetin gerektirdiği ölçüde yurt dışına aktarılır. Bu aktarımlar
+  <strong>KVKK'nın 9. maddesine uygun olarak</strong> yapılır ve her sağlayıcıyla yalnızca o
+  hizmet için gereken en az veri paylaşılır.
 </p>
 
-<h2>6. Saklama süresi</h2>
+<p>
+  Bunların dışında verilerin yalnızca kanunen yetkili kamu kurum ve kuruluşlarının hukuka
+  uygun talebi üzerine ve kanunun öngördüğü ölçüde paylaşılır. Verilerin <strong>reklam
+  amacıyla kullanılmaz, satılmaz ve pazarlama amacıyla üçüncü taraflarla paylaşılmaz.</strong>
+  Uygulamada reklam ağı veya üçüncü taraf analitik izleyicisi bulunmaz.
+</p>
 
+<h2>8. Saklama süreleri</h2>
+
+<table>
+  <tr><th>Veri</th><th>Süre</th></tr>
+  <tr><td>Hesap ve profil bilgileri</td><td>Hesabın açık kaldığı sürece</td></tr>
+  <tr><td>Check-in anındaki ham GPS konumu</td><td>30 gün, sonra otomatik silinir</td></tr>
+  <tr><td>Check-in kayıtları (mekan, mod, saat)</td><td>Hesabın açık kaldığı sürece; hesap silinince konumsuz olarak anonim hesaba bağlı kalır</td></tr>
+  <tr><td>Mesajlar</td><td>Eşleşme bittikten 24 saat sonra silinir. Açık bir şikayet varsa inceleme bitene kadar, en fazla 180 gün.</td></tr>
+  <tr><td>Göz teması ve eşleşme kayıtları (mesaj içeriği olmadan)</td><td>Hesabın açık kaldığı sürece. Hesap silinince göz temasları silinir, eşleşme kayıtları anonim hesaba bağlı kalır.</td></tr>
+  <tr><td>Bildirimler</td><td>Sen silene ya da hesabını silene kadar. Mesaj önizlemesi içeren bildirimler, mesajlarla birlikte silinir.</td></tr>
+  <tr><td>Doğrulama selfie'si</td><td>Doğrulama kararı verilene kadar</td></tr>
+  <tr><td>Denetimde reddedilen fotoğraflar</td><td>Hiç saklanmaz</td></tr>
+  <tr><td>Telefon doğrulama kodları</td><td>5 dakika geçerlidir; yalnızca geri döndürülemez özetleri tutulur</td></tr>
+  <tr><td>Şikayet ve moderasyon kayıtları</td><td>Kullanıcı güvenliği için saklanır; hesap silinince anonim hesaba bağlı kalır</td></tr>
+  <tr><td>Telefon numarası ve cihaz kimliği (hesap silindikten sonra)</td><td>6 ay, sonra otomatik silinir</td></tr>
+  <tr><td>Sunucu ve hata kayıtları</td><td>Güvenlik ve hata ayıklama için sınırlı süre</td></tr>
+  <tr><td>Destek yazışmaları</td><td>Talebin sonuçlanması ve olası uyuşmazlıklar için gereken süre</td></tr>
+</table>
+
+<h2>9. Hesap silme</h2>
+
+<p>
+  Hesabını uygulama içinden istediğin an silebilirsin: <em>Menü › Güvenlik ve Gizlilik ›
+  Hesabı Kalıcı Olarak Sil</em>. Profilin, fotoğrafların, gönderdiğin mesajlar, göz
+  temasların, bildirimlerin, engellemelerin ve tüm check-in konumların hemen silinir.
+  Telefon numaran ve cihaz kimliğin, kötüye kullanımı önlemek için 6 ay daha saklanır.
+  Neyin silindiği ve neyin ne kadar kaldığı ayrıntılı olarak
+  <a href="hesap-silme.html">hesap silme sayfasında</a> anlatılır.
+</p>
+
+<h2>10. Engelleme ve şikayet</h2>
+
+<p>
+  Rahatsız olduğun birini uygulama içinden <strong>engelleyebilir</strong> veya
+  <strong>şikayet edebilirsin</strong>. Engelleme ve şikayet iki yönlüdür: o kişiyle birbirinizi
+  Keşfet'te görmez, göz teması veya mesaj gönderemezsiniz. Şikayetler moderasyon ekibi
+  tarafından incelenir; şikayet ettiğin kişiyi artık hiçbir mekanda görmezsin. Kurallar ve
+  yaptırımlar <a href="kullanim-sartlari.html">Kullanım Şartları</a>'nda yer alır.
+</p>
+
+<h2>11. Haklarınız</h2>
+
+<p>KVKK md. 11 uyarınca şu haklara sahipsin:</p>
 <ul>
-  <li>Hesap verileri, hesabın açık kaldığı sürece saklanır.</li>
-  <li>Mesajlar, eşleşme süresi dolduğunda veya hesabını sildiğinde silinir.</li>
-  <li>Check-in kayıtları, kötüye kullanım incelemeleri için sınırlı süre saklanır.</li>
-  <li>Doğrulama kodları kısa ömürlüdür ve kullanıldıktan sonra geçersiz olur.</li>
-  <li>
-    Hesabını sildiğinde telefon numaran, telefon hash'in ve cihaz tanımlayıcın
-    <strong>6 ay daha</strong> saklanır — yasaklanan bir hesabın aynı numara ve cihazla
-    yeniden açılmasını engellemek için. Bu süre dolunca otomatik olarak silinirler.
-    Ayrıntılar: <a href="./hesap-silme.html">hesap silme sayfası</a>.
-  </li>
+  <li>Kişisel verilerinin işlenip işlenmediğini öğrenme ve işlenmişse bilgi talep etme,</li>
+  <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+  <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+  <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+  <li>KVKK md. 7'deki şartlar çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+  <li>Düzeltme ve silme işlemlerinin, verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+  <li>Münhasıran otomatik sistemlerle analiz edilmesi sonucu aleyhine bir sonuç çıkmasına itiraz etme,</li>
+  <li>Kanuna aykırı işleme nedeniyle zarara uğrarsan zararın giderilmesini talep etme.</li>
 </ul>
 
-<h2>7. Haklarınız</h2>
-
 <p>
-  KVKK md. 11 ve — Avrupa Birliği'nde bulunuyorsan — GDPR uyarınca şu haklara sahipsin:
-  verilerinin işlenip işlenmediğini öğrenme, bunlara erişme, düzeltilmesini veya
-  silinmesini isteme, işlemeye itiraz etme ve verilerini taşınabilir bir biçimde talep etme.
+  Avrupa Birliği'nde bulunuyorsan GDPR kapsamındaki erişim, düzeltme, silme, işlemeyi
+  kısıtlama, itiraz ve veri taşınabilirliği haklarına da sahipsin.
 </p>
 
 <p>
-  Bu haklarını kullanmak için <a href="mailto:oncu.sener@gmail.com">oncu.sener@gmail.com</a> adresine
-  yazabilirsin. Talebine en geç 30 gün içinde yanıt verilir. Hesabını uygulama
-  içinden de silebilirsin: <em>Profili Düzenle → Hesabı Sil</em>.
+  Bu haklarını kullanmak için <a href="mailto:oncu.sener@gmail.com">oncu.sener@gmail.com</a>
+  adresine yazabilirsin. Talebin en geç 30 gün içinde sonuçlandırılır; hesabının sana ait
+  olduğunu doğrulamak için ek bilgi isteyebiliriz. Yanıtımızdan memnun kalmazsan Kişisel
+  Verileri Koruma Kurulu'na şikayette bulunabilirsin.
 </p>
 
-<h2>8. Yaş sınırı</h2>
+<h2>12. Yaş sınırı</h2>
 
 <p>
-  Socializer yalnızca <strong>18 yaş ve üzeri</strong> kullanıcılar içindir. Kayıt
-  sırasında doğum tarihi doğrulanır. 18 yaşından küçük birine ait bir hesap tespit
-  edilirse hesap kapatılır ve verileri silinir.
+  Socializer yalnızca <strong>18 yaş ve üzeri</strong> kullanıcılar içindir. Kayıt sırasında doğum
+  tarihi istenir ve 18 yaşından küçükler kayıt olamaz. 18 yaşından küçük birine ait bir hesap
+  tespit edilirse hesap kapatılır. Ayrıntılar: <a href="cocuk-guvenligi.html">Çocuk Güvenliği
+  Standartları</a>.
 </p>
 
-<h2>9. Değişiklikler</h2>
+<h2>13. Değişiklikler</h2>
 
 <p>
   Bu politika güncellenebilir. Önemli değişikliklerde uygulama içinden bilgilendirilirsin.
   Sayfanın en üstündeki tarih, yürürlükteki sürümü gösterir.
 </p>
 
-<h2>10. İletişim</h2>
+<h2>14. İletişim</h2>
 
 <p>
   Gizlilikle ilgili her türlü soru ve talebin için:
@@ -291,7 +447,7 @@
 </p>
 
 <footer>
-  Socializer · Fırat Öncü Şener · Son güncelleme 19 Ağustos 2026
+  Socializer · Fırat Öncü Şener · Seyyitömer Mahallesi, Hüseyin Kazım Sokak No: 53, Fatih / İstanbul · Son güncelleme 22 Ekim 2026
 </footer>
 
 </div>
