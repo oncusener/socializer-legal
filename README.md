@@ -21,5 +21,8 @@ Notlar:
   kullanıcılardan yeniden onay istenir.
 - Metinler uygulamanın gerçek davranışını anlatır (saklama süreleri, silinen veriler,
   üçüncü taraflar). Kodda bu davranış değişirse ilgili sayfayı da güncelle.
+- Kullanım Şartları'ndaki kurucu üye programı (`#kurucu-uye` / `#founding-members`)
+  "şu an ilk 5.000 kişi" ve "şu an 12 ay" der. Paneldeki `founderCap`,
+  `founderPlanType` veya `founderDurationDays` değişirse bu iki ifadeyi de güncelle.
 - Her sayfanın üstünde dört sayfa arasında ve TR/EN karşılığına giden bağlantılar vardır.
   Bağlantılar görelidir; dış bağımlılık yoktur.

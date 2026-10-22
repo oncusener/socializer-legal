@@ -124,6 +124,14 @@
   cannot be signed into again.
 </p>
 
+<p>
+  <strong>If you are stuck on the phone verification screen</strong> (for example because your
+  founding member perk has ended and you haven't verified your number yet), you can't reach the
+  menu. In that case tap the <strong>Delete my account</strong> link at the bottom of that screen
+  and confirm the warning with <strong>Delete My Account</strong>; it is exactly the same process as
+  above.
+</p>
+
 <h2>2. Request deletion by email</h2>
 
 <p>
@@ -139,8 +147,9 @@
     Use the subject line <em>Account Deletion Request</em> and include your account's
     <strong>nickname</strong> and <strong>phone number</strong>. We may ask for extra information
     to confirm that the account is yours. We will complete the request <strong>within 30 days</strong>
-    and confirm it to you in writing. Your account is deleted to the same extent as an in-app
-    deletion (sections 4 and 5 below).
+    and confirm it to you in writing. We carry out your request in our admin panel with exactly the
+    same process as the app's <em>Delete Account Permanently</em>, so your account is deleted to the
+    same extent as an in-app deletion (sections 4 and 5 below).
   </p>
 </div>
 
@@ -148,9 +157,7 @@
 
 <ul>
   <li>You can remove your profile photos and bio on the <strong>Edit Profile</strong> screen. A photo
-      you remove disappears from your profile right away and is not shown to anyone in the app;
-      its file on our server may not be deleted right away. If you want it deleted, just write to
-      the address above.</li>
+      you remove is deleted from our server right away, together with its thumbnail.</li>
   <li>You can delete notifications one by one or all at once from the notification list.</li>
   <li>You don't need to do anything for chats: messages are deleted automatically 24 hours after
       the match ends. If there is an open report between you, the chat is kept until the review
@@ -169,15 +176,17 @@
 <div class="scroller">
 <table>
   <tr><th>Data</th><th>What happens</th></tr>
-  <tr><td>The profile photos and avatar on your account</td><td>The database records and the files on our server are deleted together</td></tr>
-  <tr><td>Bio, date of birth, gender</td><td>Deleted</td></tr>
+  <tr><td>Your profile photos, their thumbnails and your avatar</td><td>The database records and the files on our server are deleted together</td></tr>
+  <tr><td>Bio and date of birth</td><td>Deleted</td></tr>
   <tr><td>Your nickname</td><td>Replaced with an anonymous value; cannot be restored</td></tr>
-  <tr><td>Verification details</td><td>Your badge and verification status are deleted. If a verification photo of yours is still waiting for review, its link to your account is removed (see section 5 for the file).</td></tr>
+  <tr><td>Verification details</td><td>Your badge and verification status are deleted. If a verification photo of yours is still waiting for review, it is deleted together with its file.</td></tr>
   <tr><td>Messages you sent</td><td>Deleted. Exception: your messages in chats with an open report between you are kept until the review is finished, at most 180 days after the match ended, and then deleted.</td></tr>
   <tr><td>Your eye contacts</td><td>Both the ones you sent and the ones you received are deleted</td></tr>
   <tr><td>Notifications</td><td>Your notifications, and notifications about you in other people's lists, are deleted</td></tr>
   <tr><td>Blocks</td><td>The people you blocked and your venue-level block records are deleted</td></tr>
   <tr><td>Your check-in locations</td><td>The GPS position is removed from all your check-ins; an open check-in is closed</td></tr>
+  <tr><td>Your push tokens (the address used to send notifications to your device)</td><td>Deleted; no more notifications are sent to your device. Pending notification delivery records are deleted too.</td></tr>
+  <tr><td>Your invite code</td><td>Disabled; nobody can sign up with your link any more, and no invite rewards build up for you</td></tr>
   <tr><td>Your matches</td><td>All of them end</td></tr>
   <tr><td>Your device sign-in key and session</td><td>Invalidated; the account can't be signed into again</td></tr>
 </table>
@@ -193,7 +202,9 @@
     <td><strong>6 months.</strong> To make it harder for someone who broke the rules to delete their
         account and start over straight away with the same number, and to stop venue blocks tied
         to the device ID from being bypassed with a new account. During this time the same number
-        can't be verified on a new account.</td>
+        can't be verified on a new account. If you never verified your phone (for example because
+        you used the app as a founding member without verification), there is no number to keep;
+        only your device ID remains.</td>
   </tr>
   <tr>
     <td>Venue blocks tied to your device ID</td>
@@ -218,27 +229,15 @@
         anonymised account and used for venue statistics.</td>
   </tr>
   <tr>
-    <td>Your push token (the address used to send notifications to your device)</td>
-    <td>While the app stays on your device, general announcements may keep reaching it. When you
-        uninstall the app the token becomes invalid and is deleted from our server at the next
-        send. If you want it deleted right away, write to the address above.</td>
-  </tr>
-  <tr>
-    <td>Files of photos you removed from your profile earlier, and of a verification photo still
-        waiting for review</td>
-    <td>No longer linked to your account and not shown to anyone in the app, but they may not be
-        deleted from our server right away. If you want them deleted, just write to the address
-        above.</td>
-  </tr>
-  <tr>
     <td>SMS sending and verification records</td>
-    <td>Kept with a hash of your phone number, not linked to your account, to limit SMS
-        abuse.</td>
+    <td>Not linked to your account; kept only with a hash of your phone number. Verification code
+        records are deleted automatically after <strong>24 hours</strong>, and SMS sending records
+        after <strong>180 days</strong>, which we keep to limit SMS abuse.</td>
   </tr>
   <tr>
     <td>Other fields of the account record (your settings, last online time, Premium and founding
-        member details, your invite code and who invited you, daily message and photo moderation
-        counters)</td>
+        member details, your disabled invite code and who invited you, daily message and photo
+        moderation counters)</td>
     <td>Kept, linked to the anonymised account; they contain no name, phone number or photo.</td>
   </tr>
   <tr>

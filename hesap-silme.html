@@ -124,6 +124,13 @@
   aynı hesaba bir daha giriş yapılamaz.
 </p>
 
+<p>
+  <strong>Telefon doğrulama ekranında kaldıysan</strong> (ör. kurucu üye ayrıcalığın kapandıysa ve
+  numaranı henüz doğrulamadıysan) menüye ulaşamazsın. Bu durumda ekranın altındaki
+  <strong>Hesabımı sil</strong> bağlantısına dokunup uyarıyı <strong>Hesabımı Sil</strong> ile
+  onayla; işlem yukarıdakiyle birebir aynıdır.
+</p>
+
 <h2>2. E-posta ile silme talebi</h2>
 
 <p>
@@ -139,8 +146,9 @@
     Konu satırına <em>Hesap Silme Talebi</em> yaz ve mesajda hesabındaki
     <strong>takma adını</strong> ve <strong>telefon numaranı</strong> belirt. Hesabın sana ait
     olduğunu doğrulamak için ek bilgi isteyebiliriz. Talebi <strong>30 gün içinde</strong>
-    sonuçlandırır ve sana yazılı olarak bilgi veririz. Hesabın, uygulama içinden silmeyle aynı
-    kapsamda silinir (aşağıdaki 4. ve 5. bölümler).
+    sonuçlandırır ve sana yazılı olarak bilgi veririz. Talebini yönetim panelinde, uygulamadaki
+    <em>Hesabı Kalıcı Olarak Sil</em> ile birebir aynı işlemle yerine getiririz; hesabın uygulama
+    içinden silmeyle aynı kapsamda silinir (aşağıdaki 4. ve 5. bölümler).
   </p>
 </div>
 
@@ -148,8 +156,7 @@
 
 <ul>
   <li>Profil fotoğraflarını ve biyografini <strong>Profili Düzenle</strong> ekranından kaldırabilirsin.
-      Kaldırdığın fotoğraf profilinden hemen çıkar ve uygulamada kimseye gösterilmez; sunucudaki
-      dosyası hemen silinmeyebilir. Silinmesini istersen yukarıdaki adrese yazman yeterli.</li>
+      Kaldırdığın fotoğraf, küçük resmiyle birlikte sunucudan hemen silinir.</li>
   <li>Bildirimlerini bildirim listesinden tek tek ya da topluca silebilirsin.</li>
   <li>Sohbetler için bir şey yapman gerekmez: eşleşme bittikten 24 saat sonra mesajlar
       otomatik olarak silinir. Aranızda açık bir şikayet varsa sohbet inceleme bitene kadar, en
@@ -168,15 +175,17 @@
 <div class="scroller">
 <table>
   <tr><th>Veri</th><th>Ne oluyor</th></tr>
-  <tr><td>Hesabındaki profil fotoğrafların ve avatarın</td><td>Veritabanı kaydı ve sunucudaki dosyalar birlikte silinir</td></tr>
-  <tr><td>Biyografi, doğum tarihi, cinsiyet</td><td>Silinir</td></tr>
+  <tr><td>Profil fotoğrafların, küçük resimleri ve avatarın</td><td>Veritabanı kaydı ve sunucudaki dosyalar birlikte silinir</td></tr>
+  <tr><td>Biyografi ve doğum tarihi</td><td>Silinir</td></tr>
   <tr><td>Takma adın</td><td>Anonim bir değerle değiştirilir, geri getirilemez</td></tr>
-  <tr><td>Doğrulama bilgilerin</td><td>Rozetin ve doğrulama durumun silinir. İncelemesi bitmemiş bir doğrulama fotoğrafın varsa hesabınla bağlantısı silinir (dosyası için 5. bölüme bak).</td></tr>
+  <tr><td>Doğrulama bilgilerin</td><td>Rozetin ve doğrulama durumun silinir. İncelemesi bitmemiş bir doğrulama fotoğrafın varsa dosyasıyla birlikte silinir.</td></tr>
   <tr><td>Gönderdiğin mesajlar</td><td>Silinir. İstisna: aranızda açık bir şikayet bulunan sohbetlerdeki mesajların inceleme bitene kadar, eşleşmenin bitişinden en fazla 180 gün saklanır, sonra silinir.</td></tr>
   <tr><td>Göz temasların</td><td>Gönderdiklerin ve aldıkların silinir</td></tr>
   <tr><td>Bildirimler</td><td>Senin bildirimlerin ve başkalarının listesindeki seninle ilgili bildirimler silinir</td></tr>
   <tr><td>Engellemeler</td><td>Engellediğin kişiler ve mekan bazlı engel kayıtların silinir</td></tr>
   <tr><td>Check-in konumların</td><td>Tüm check-in'lerindeki GPS konumu silinir; açık check-in'in kapatılır</td></tr>
+  <tr><td>Bildirim jetonların (cihazına bildirim göndermek için kullanılan adres)</td><td>Silinir; cihazına artık bildirim gönderilmez. Bekleyen bildirim teslim kayıtları da silinir.</td></tr>
+  <tr><td>Davet kodun</td><td>Kullanılamaz hale getirilir; linkinle artık kayıt olunamaz ve sana davet ödülü birikmez</td></tr>
   <tr><td>Eşleşmelerin</td><td>Hepsi sona erer</td></tr>
   <tr><td>Cihaz giriş anahtarın ve oturumun</td><td>Geçersiz kılınır; bu hesaba bir daha girilemez</td></tr>
 </table>
@@ -191,7 +200,9 @@
     <td>Telefon numaran (şifreli), telefon numaranın arama özeti (hash) ve cihaz kimliğin</td>
     <td><strong>6 ay.</strong> Kurallara aykırı davranan birinin hesabını silip aynı numarayla hemen
         temiz bir hesap açmasını zorlaştırmak ve cihaz kimliğine bağlı mekan engellerinin yeni bir
-        hesapla aşılmasını önlemek için. Bu süre içinde aynı numara yeni bir hesapta doğrulanamaz.</td>
+        hesapla aşılmasını önlemek için. Bu süre içinde aynı numara yeni bir hesapta doğrulanamaz.
+        Telefonunu hiç doğrulamadıysan (ör. kurucu üye olarak doğrulama yapmadan kullandıysan)
+        saklanan bir numara yoktur; yalnızca cihaz kimliğin kalır.</td>
   </tr>
   <tr>
     <td>Cihaz kimliğine bağlı mekan engelleri</td>
@@ -215,26 +226,15 @@
         mekan istatistikleri için kullanılır.</td>
   </tr>
   <tr>
-    <td>Bildirim jetonun (cihazına bildirim göndermek için kullanılan adres)</td>
-    <td>Uygulama cihazında kaldıkça bu cihaza genel duyurular gelmeye devam edebilir. Uygulamayı
-        kaldırdığında jeton geçersizleşir ve bir sonraki gönderimde sunucudan silinir. Hemen
-        silinmesini istersen yukarıdaki adrese yazabilirsin.</td>
-  </tr>
-  <tr>
-    <td>Daha önce profilinden kaldırdığın fotoğrafların ve incelemesi bitmemiş doğrulama
-        fotoğrafının dosyaları</td>
-    <td>Hesabınla bağlantısı kalmaz ve uygulamada kimseye gösterilmez, ancak sunucudan hemen
-        silinmeyebilir. Silinmesini istersen yukarıdaki adrese yazman yeterli.</td>
-  </tr>
-  <tr>
     <td>SMS gönderim ve doğrulama kayıtları</td>
-    <td>Telefon numaranın özetiyle, hesabına bağlı olmadan tutulur; SMS kötüye kullanımını
-        sınırlamak için.</td>
+    <td>Hesabına bağlı olmadan, yalnızca telefon numaranın özetiyle tutulur. Doğrulama kodu
+        kayıtları <strong>24 saat</strong>, SMS gönderim kayıtları SMS kötüye kullanımını sınırlamak
+        için <strong>180 gün</strong> sonra otomatik olarak silinir.</td>
   </tr>
   <tr>
     <td>Hesap kaydının diğer alanları (ayarların, son çevrimiçi zamanın, Premium ve kurucu üyelik
-        bilgisi, davet kodun ve seni kimin davet ettiği, günlük mesaj ve fotoğraf denetimi
-        sayaçları)</td>
+        bilgisi, kullanılamaz hale getirilmiş davet kodun ve seni kimin davet ettiği, günlük mesaj
+        ve fotoğraf denetimi sayaçları)</td>
     <td>Anonim hesaba bağlı kalır; adını, telefonunu veya fotoğrafını içermez.</td>
   </tr>
   <tr>

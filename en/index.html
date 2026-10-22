@@ -101,7 +101,7 @@
   </tr>
   <tr>
     <td>Phone number</td>
-    <td>Account verification; preventing more than one account per number and making fake or re-created accounts harder</td>
+    <td>Account verification; preventing more than one account per number and abuse of invite rewards, and making fake or re-created accounts harder. If you started without phone verification under the <a href="terms.html#founding-members">founding member programme</a>, your number is not collected; it is only collected when verification is requested and you enter it.</td>
     <td>Performance of contract (c), legitimate interest (f)</td>
   </tr>
   <tr>
@@ -110,7 +110,7 @@
     <td>Performance of contract (c), legitimate interest (f): protecting minors</td>
   </tr>
   <tr>
-    <td>Gender, bio (optional)</td>
+    <td>Bio (optional)</td>
     <td>Building your profile</td>
     <td>Performance of contract (c)</td>
   </tr>
@@ -132,6 +132,11 @@
   <tr>
     <td>Check-in records (venue, mode, duration, visibility choice, time)</td>
     <td>Running Discover, showing how busy venues are (as anonymous counts), investigating abuse, producing our own usage statistics to improve the service</td>
+    <td>Performance of contract (c), legitimate interest (f)</td>
+  </tr>
+  <tr>
+    <td>Online status and last seen time</td>
+    <td>Showing the person you are matched with whether you are online (see section 2), producing our own usage statistics (for example daily active users)</td>
     <td>Performance of contract (c), legitimate interest (f)</td>
   </tr>
   <tr>
@@ -160,8 +165,8 @@
     <td>Performance of contract (c)</td>
   </tr>
   <tr>
-    <td>Premium, subscription and invite details</td>
-    <td>Providing Premium features and invite rewards (we record who invited you)</td>
+    <td>Premium, subscription, founding member and invite details</td>
+    <td>Providing Premium features, founding member perks (your founding member number, whether you skipped phone verification under the programme, whether your founding member Premium is suspended) and invite rewards (we record who invited you)</td>
     <td>Performance of contract (c)</td>
   </tr>
   <tr>
@@ -180,7 +185,7 @@
 <h2>2. What other users can see</h2>
 
 <ul>
-  <li>Your nickname, age, gender, bio, approved photos, verification badge, whether you are a
+  <li>Your nickname, age, bio, approved photos, verification badge, whether you are a
       Premium member, and the mode you chose (Flirt, Network, Chill).</li>
   <li>Only people who have <strong>checked in at the same venue</strong> can see you in Discover,
       depending on the visibility you chose when checking in.</li>
@@ -191,8 +196,11 @@
       open your profile later too. Once you delete your account, or if there is a block or report
       between you, your profile is no longer visible to them.</li>
   <li>While you are matched, the other person can see whether you are online and when you were
-      last seen. Premium members can see whether the messages they sent have been read.</li>
-  <li>Your phone number, date of birth, exact location and device ID are
+      last seen. If showing your online status is turned off in your account's privacy settings,
+      neither of these is sent to the other person. This setting can't be changed in the app yet;
+      if you want it turned off, write to us. Premium members can see whether the messages they
+      sent have been read.</li>
+  <li>Your phone number, date of birth, exact location, device ID and founding member number are
       <strong>never shown</strong> to other users.</li>
 </ul>
 
@@ -260,10 +268,10 @@
       is performed, no biometric template is created</strong>, and the face data returned by
       Vision is not stored.</li>
   <li>Your verification selfie is deleted from our server once the verification decision is made.
-      Your profile must be verified before you can send chat messages.</li>
-  <li>A photo you remove in Edit Profile disappears from your profile right away and is not shown
-      to anyone in the app; its file on our server may not be deleted right away. If you want it
-      deleted, write to us.</li>
+      If you send a new selfie before a decision, the file of the previous one is deleted. Your
+      profile must be verified before you can send chat messages.</li>
+  <li>A photo you remove in Edit Profile is deleted from our server right away, together with its
+      thumbnail.</li>
   <li>Nicknames and bios go through an automatic filter for profanity, insults and sexual content.</li>
 </ul>
 
@@ -284,8 +292,10 @@
       content of chats between people with no report between them cannot be read; only technical
       details (participants, date, number of messages) are visible.</li>
   <li>New-message notifications contain the sender's nickname and the first 40 characters of the
-      message and are delivered through the notification services listed below. These previews
-      in your in-app notification list are stored unencrypted and deleted together with the
+      message. To reach your device, this text is delivered through the Expo push service and,
+      depending on your device, Apple (APNs) or Google (Firebase Cloud Messaging) (see section 7),
+      and it may appear on your lock screen depending on your device settings. These previews in
+      your in-app notification list are stored unencrypted and deleted together with the
       messages.</li>
 </ul>
 
@@ -336,12 +346,12 @@
   </tr>
   <tr>
     <td>Expo push service, Apple (APNs), Google (Firebase Cloud Messaging)</td>
-    <td>Push token, notification text</td>
+    <td>Push token; the notification title and text (in a new-message notification, the sender's nickname and the first 40 characters of the message); record IDs used to open the right screen when you tap the notification (for example the match ID)</td>
     <td>Delivering push notifications</td>
   </tr>
   <tr>
-    <td>Expo (app updates)</td>
-    <td>Your IP address, app version and a random installation ID</td>
+    <td>Expo (EAS Update, app updates)</td>
+    <td>Your IP address, platform (iOS/Android), app and installed update version, and an installation ID generated randomly on your device</td>
     <td>Checking for and downloading app updates when the app opens</td>
   </tr>
   <tr>
@@ -397,14 +407,15 @@
   <tr><td>Messages</td><td>Deleted 24 hours after the match ends. If there is an open report, until the review ends, at most 180 days.</td></tr>
   <tr><td>Eye contact and match records (without message content)</td><td>As long as your account is open. On deletion, eye contacts are deleted and match records stay linked to the anonymised account.</td></tr>
   <tr><td>Notifications</td><td>Until you delete them or delete your account. Notifications with a message preview are deleted together with the messages.</td></tr>
-  <tr><td>Push token</td><td>Deleted when you sign out. If you uninstall the app, it is deleted at the next send once the notification service reports it as invalid. What happens when you delete your account is explained on the <a href="account-deletion.html">account deletion page</a>.</td></tr>
-  <tr><td>Verification selfie</td><td>Until the verification decision</td></tr>
+  <tr><td>Push token</td><td>Deleted immediately when you sign out or delete your account. Also deleted if your account is suspended indefinitely or deactivated; during a time-limited suspension it is kept, but no notifications are sent to you until the suspension ends. If you uninstall the app, it is deleted once the notification service reports it as invalid.</td></tr>
+  <tr><td>Notification delivery records (delivery ticket and push token)</td><td>Until the delivery result is checked, at most about 24 hours. Deleted immediately when you delete your account.</td></tr>
+  <tr><td>Verification selfie</td><td>Until the verification decision. If you send a new selfie the previous one is deleted, and a pending selfie is deleted immediately if you delete your account.</td></tr>
   <tr><td>Photos rejected by moderation</td><td>Never stored</td></tr>
-  <tr><td>Photos you remove from your profile</td><td>No longer shown in the app from the moment you remove them; the file on our server may not be deleted right away. Write to us if you want it deleted.</td></tr>
-  <tr><td>Phone verification codes</td><td>Valid for 5 minutes; the code itself is not stored, only a hash of it</td></tr>
-  <tr><td>SMS sending and verification records</td><td>Kept with a hash of the phone number, not linked to your account, for as long as needed to limit SMS abuse</td></tr>
+  <tr><td>Photos you remove from your profile</td><td>The file is deleted right away, together with its thumbnail</td></tr>
+  <tr><td>Phone verification codes</td><td>A code is valid for 5 minutes; the code itself is never stored. The verification record, which holds a hash of the code and of your phone number, is deleted automatically after 24 hours.</td></tr>
+  <tr><td>SMS sending records</td><td>Not linked to your account; kept with a hash of your phone number, the SMS provider and the delivery status. Kept for 180 days to limit SMS abuse, then deleted automatically.</td></tr>
   <tr><td>Report and moderation records</td><td>Kept for user safety; after account deletion they stay linked to the anonymised account</td></tr>
-  <tr><td>Phone number and device ID (after account deletion)</td><td>6 months, then deleted automatically</td></tr>
+  <tr><td>Phone number (if you verified it) and device ID (after account deletion)</td><td>6 months, then deleted automatically</td></tr>
   <tr><td>Server and error logs</td><td>As long as needed for security and debugging. These logs may contain IP addresses and request addresses (which can include location).</td></tr>
   <tr><td>Support correspondence</td><td>As long as needed to resolve your request and any dispute</td></tr>
 </table>
@@ -413,10 +424,15 @@
 
 <p>
   You can delete your account in the app at any time: <em>Menu › Security &amp; Privacy › Delete
-  Account Permanently</em>. Your profile, photos, the messages you sent, your eye contacts,
-  notifications, blocks and all check-in locations are deleted immediately. Messages in chats
-  with an open report between you are kept until the review is finished, at most 180 days.
-  Your phone number and device ID are kept for 6 more months to prevent abuse. The
+  Account Permanently</em>. If you are stuck on the phone verification screen (for example because
+  your founding member perk has ended), you can do the same from the <em>Delete my account</em> link
+  on that screen. Your profile, photos (with their files on our server), a pending verification
+  selfie, the messages you sent, your eye contacts, notifications, push tokens, blocks and all
+  check-in locations are deleted immediately, and your invite code stops working. Messages in
+  chats with an open report between you are kept until the review is finished, at most 180 days.
+  Your phone number (if you verified it) and device ID are kept for 6 more months to prevent
+  abuse. If you can't access the app, you can send a deletion request by email; we carry it out
+  in our admin panel with exactly the same process as an in-app deletion, to the same extent. The
   <a href="account-deletion.html">account deletion page</a> explains in detail what is deleted
   and what is kept, and for how long.
 </p>
